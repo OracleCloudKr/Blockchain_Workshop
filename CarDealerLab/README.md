@@ -3,7 +3,7 @@
 ## 사전 준비사항 ##
 + Oracle Cloud Trial Account
 
-### 소개 ###
+## 소개 ##
 이번 Lab은 자동차 Oracle BlockChain를 활용하여 Car Dealer 회사에서 자동차 매매에 투명성을 확보할 수 있도록 해주는 Lab 입니다.
 
 #### Lab 시나리오
@@ -17,7 +17,7 @@
 이 채널들은 차량 제조업체와 특정 딜러 만 볼 수 있는 별도의 원장을 각각 갖게 됩니다. 채널은 2 개가 아닌 여러 참여자를 가질 수 있고, 네트워크는 더 많은 조직 (예 : 여러 다른 부품 제조업체)을 가질 수 있지만, 이 시나리오에서는 간단한 모델만으로도 충분합니다.
 
 
-** ABCS Console 에 접속하기 **
+** ABCS Console 에 접속하기
 + '로열티 관리' 응용 프로그램은
 
-** Organization(조직) 생성하기 Provisioning **
+** Organization(조직) 생성하기 Provisioning
