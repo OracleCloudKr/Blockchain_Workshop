@@ -16,11 +16,12 @@
 
 이 채널들은 차량 제조업체와 특정 딜러 만 볼 수 있는 별도의 원장을 각각 갖게 됩니다. 채널은 2 개가 아닌 여러 참여자를 가질 수 있고, 네트워크는 더 많은 조직 (예 : 여러 다른 부품 제조업체)을 가질 수 있지만, 이 시나리오에서는 간단한 모델만으로도 충분합니다.
 
+#### Lab 시작
 
-**OABCS(Oracle BlockChain Cloud Service) Console 에 접속하기 **
+1. OABCS(Oracle BlockChain Cloud Service) Console 에 접속하기
 +  OABCS에 접속하기 위해서는 Cloud Console에서 다음과 같이 선택해서 Open Service Console을 클릭합니다.
 ![](images/gotoabcs.png)
 
-**Organization(조직) 생성하기 Provisioning **
+2. Organization(조직) 생성하기 Provisioning
 처음 접속을 한 경우에는 아래와 같이 나오게 됩니다.
 ![](images/abcs_main.png)
