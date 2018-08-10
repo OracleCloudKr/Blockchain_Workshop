@@ -25,3 +25,13 @@
 2. Organization(조직) 생성하기 Provisioning
 처음 접속을 한 경우에는 아래와 같이 나오게 됩니다.
 ![](images/abcs_main.png)
+
+3. 오른쪽에 있는 인스턴스 생성 버튼을 누릅니다.
+![](images/create_instance1.png)
+4. Next를 누른후 다음 화면에서 Confirm 버튼을 누릅니다.
+5. 몇 분 후에 아래와 같이 인스턴스가 생성이 되게 됩니다.
+![](images/create_instance2.png)
+6. 오른쪽의 햄버거 버튼을 클릭 한 후에 Autonomous Blockchain Console을 선택합니다.
+
+7. 새롭게 생성된 detroitauto Founder의 Console 화면으로 이동합니다.
+![](images/detroit_main.png)
