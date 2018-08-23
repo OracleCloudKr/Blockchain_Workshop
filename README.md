@@ -5,9 +5,11 @@
 실제 블록체인 환경 구성과 스마트컨트랙트를 개발 해봄으로써 블록체인이 기업환경에서 어떤 변화를 가져올지 직접 체험할 수 있게 해줍니다.
 
 ## Oracle 블록체인 Lab (Car Dealer Network) ##
-[Car Dealer Lab](./CarDealerLab)
+[Lab 100 Car Dealer Lab](./CarDealerLab)
 
 
 ## 체인코드 배포 및 테스트 (Balance Transfer) ##
-[체인코드 배포 및 테스트 (Balance Transfer](./BalanceTransfer)
+[Lab 200. 체인코드 배포 및 테스트 (Balance Transfer)](./BalanceTransfer)
 
+## 샘플 체인코드 개발하기 ##
+[Lab 300. 샘플 체인코드 개발하기](./ChaincodeDev)
