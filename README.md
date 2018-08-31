@@ -13,8 +13,6 @@ Oracle Blockchain Cloud 서비스가 가용한 Data Center Region를 확인하�
 * [Trial 계정 신청하기](http://www.oracloud.kr/post/oracle_cloud_trial_universal/)
 * [가용한 데이터 선터 Region 확인하기](https://cloud.oracle.com/en_US/data-regions)
 
-챗봇을 만드는 것을 수월하게 해줄 코드가 포함되어이 있는 zip파일을 instructor를 통해 받으세요. **labfiles.zip**라는 이름으로 되어 있습니다. 이 코스 전반에 걸쳐 언급 될것이므로 편리한 장소에 저장하십시오.
-
 ## Oracle 블록체인 Lab (Car Dealer Network) ##
 [Lab 100 Car Dealer Lab](./CarDealerLab)
 
