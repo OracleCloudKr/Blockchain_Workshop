@@ -7,10 +7,11 @@
 ![Alt text](https://monosnap.com/image/u5jqpRbcB4HjU15gUXMZoAOPlKDeQK.png)
 
 # Prerequisite 
-이 핸즈온을 완료하려면 Oracle Autonomous Blockchain Cloud에 액세스해야합니다. Oracle Cloud 계정을 가지고 계시지 않다면 아래 방법에 따라 무료 계정을 받으세요. Oracle Blockchain Cloud 서비스눈 현재 몇몇 Data Center Region에서만 사용가능하므로, 가용 데이터센터를 확인하시고 계정을 신청하시면 됩니다. 
+이 핸즈온을 완료하려면 Oracle Autonomous Blockchain Cloud에 액세스해야합니다. Oracle Cloud 계정을 가지고 계시지 않다면 아래 방법에 따라 무료 계정을 받으세요. 
+Oracle Blockchain Cloud 서비스가 가용한 Data Center Region를 확인하시고 계정 신청 시에 해당  Region을 선택해서야 서비스를 이용할 수 있습니다. 
 
 * [Trial 계정 신청하기](http://www.oracloud.kr/post/oracle_cloud_trial_universal/)
-
+* [가용한 데이터 선터 Region 확인하기](https://cloud.oracle.com/en_US/data-regions)
 
 챗봇을 만드는 것을 수월하게 해줄 코드가 포함되어이 있는 zip파일을 instructor를 통해 받으세요. **labfiles.zip**라는 이름으로 되어 있습니다. 이 코스 전반에 걸쳐 언급 될것이므로 편리한 장소에 저장하십시오.
 
