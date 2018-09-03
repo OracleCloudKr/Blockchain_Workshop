@@ -4,7 +4,7 @@
 + Oracle Cloud Trial Account
 
 ## 소개 ##
-이번 Lab은 자동차 Oracle BlockChain를 활용하여 Car Dealer 회사에서 자동차 매매에 투명성을 확보할 수 있도록 해주는 Lab 입니다.
+이번 Lab은 Oracle BlockChain를 활용하여 Car Dealer 회사에서 자동차 매매에 투명성을 확보할 수 있도록 해주는 Lab 입니다.
 
 ## Lab 시나리오
 대형 자동차 회사는 딜러 / 구매자의 공급망을 관리하는 소프트웨어(SCM)을 원장 (blockchain)에 권한을 부여하는 방식으로 공급망 시스템을 간소화하는 것을 목표로 하고 있습니다. 최종 목표는 조정하는 노력과 차량 및 부품에 대한 감사 추적 설정과 관련된 전반적인 마찰을 줄이는 것입니다.
@@ -61,8 +61,8 @@ OABCS에 접속하기 위해서는 Cloud Console에서 다음과 같이 선택�
 먼저 judedealer 의 콘솔에 접속합니다.
 ![](images/goto_judedealer.png)
 
-2. Founder는 Participant Org의 두 가지 정보가 필요합니다. 첫째는 통신의 유효성을 확인할 수 있는 인증서 이고, 두번째는 Org에서 관리하는 피어 노드에 대한 정보입니다. 피어 정보는 이후 프로세스까지 필요하지 않습니다.
-인증서를 얻으려면 Participant Org의 콘솔을 엽니다. 네트워크 탭에서 햄버거 메뉴를 클릭하고 딜러 조직에서 '인증서 내보내기'를 선택하여 인증서를 내보낼 수 있습니다. 내보낸 파일을 저장하십시오.
+2. Founder는 Participant Org의 두 가지 정보가 필요합니다. 첫째는 참가하는 Org를 검증 하기 위한 인증서가 필요하고, 두번째는 Org에서 관리하는 피어 노드에 대한 정보입니다. 피어 정보는 이후 프로세스까지 필요하지 않습니다.
+Participant의 인증서를 가져오기 위해 Participant Org의 콘솔을 엽니다. 네트워크 탭에서 햄버거 메뉴를 클릭하고 딜러 조직에서 '인증서 내보내기'를 선택하여 인증서를 내보낼 수 있습니다. 내보낸 파일을 저장하십시오.
 ![](images/judedealer_main.png)
 
 3. Export 버튼을 눌러 judedealer-certificates.json 파일을 서버로 부터 로컬 컴퓨터에 다운로드 합니다.  
@@ -97,43 +97,50 @@ OABCS에 접속하기 위해서는 Cloud Console에서 다음과 같이 선택�
 ### C. Founder에 SamDealer Participant 조직(Organization)을 Join하기
 위와 동일한 방식으로 SamDealer Org를 Founder에 추가합니다. 
 
-### D. Channel
+### D. Channel 생성하기
 Multi-Party 블록 체인 네트워크를 설정하는 마지막 단계는 각 딜러의 거래를 다른 딜러의 거래와 분리하기 위해 각 딜러의 채널을 만드는 것입니다. 이 시나리오에서는 두 명의 각 대리점을 위한 별도의 채널을 만들 것입니다.
 
-1. Channel 만들기  
-이를 생성하려면 Founder Org의 콘솔에서 "Channels" 탭으로 이동하십시오. 그런 다음 "Create a New Channel"를 클릭하십시오. 이 딜러는 '<dealer> channel'이라는 채널 (예 : 'samchannel'과 'judechannel')에 대한 채널을 만들면 됩니다. 각 채널에 대해 ReaderWriter가 포함되어 있고 Detroit Auto Peer의 피어가 모두 채널에 가입되어 있는지 확인하십시오.
+1. Channel 생성  
+먼저 Founder Org의 콘솔에서 "Channels" 탭으로 이동하십시오. 그런 다음 "Create a New Channel"를 클릭하십시오. '<dealer> channel'이라는 (예 : 'samchannel'과 'judechannel') 채널을 만들면 됩니다. 각 채널에 대해 ReaderWriter가 포함되어 있고 Detroit Auto Peer의 피어가 모두 채널에 가입되어 있는지 확인하십시오.
 ![](images/create_newchannel.png)
 
 2. Participant nodes에서 채널에 참가하기  
-이 채널들은 현재 Detroit Auto의 피어 노드만을 포함합니다. 딜러는 참여하는 노드가 없으므로 이 채널에서 트랜잭션을 만들거나 트랜잭션을 볼 수 없습니다. 그러나 조직이 채널 생성시에 채널에 피어를 추가 할 수 있습니다.
-생성 된 채널에 참여하려면 Participant Org의 콘솔에 액세스하십시오. "Nodes" 탭으로 이동하여 각 피어 노드에 대한 햄버거 메뉴를 클릭 한 다음 "Join New Channels"를 선택하십시오.
+이 채널들은 현재 Detroit Auto의 피어 노드만을 포함합니다. 딜러들은 참여하는 노드가 없으므로 이 채널에서 트랜잭션을 만들거나 트랜잭션을 볼 수 없습니다. 그러나 조직이 채널 생성시에 채널에 피어를 추가 할 수 있습니다.
+생성 된 채널에 참여하려면 Participant Org의 콘솔에 액세스하십시오. "Nodes" 탭으로 이동하여 각 피어 노드(peer0-1, pee0-2)에 대하여 햄버거 메뉴를 클릭 한 다음 "Join New Channels"를 선택하십시오.
 채널 이름을 묻는 대화 상자가 표시됩니다. 각 피어에 대해 채널 이름 ( 'samchannel'또는 'judechannel')을 적절하게 입력 한 다음 'Join'을 클릭하십시오.
 ![](images/join_channel_participant.png)
 ![](images/join_channel_participant2.png)
 
-다른 모든 peer에 대해서도 동일하게 수행합니다.
+3. 다른 모든 peer에 대해서도 동일하게 수행합니다.
 * judedealer Org의 콘솔에서도 위와 동일한 작업을 수행합니다.
 
-3. Participant node 정보를 Founder에 추가하기
+4. Endorsing을 위한 Participant 정보를 Founder에 추가하기
 Founder가 다른 Org를 Transaction 의 endorser로 포함 시키려면 다른 피어 노드에 대해 알아야합니다. 이렇게 하기 위해 우리는 노드 정보를 내보내고 Founder에서 가져옵니다.
 Participant Org에서 "Nodes" 탭으로 이동 한 다음 "Export / Import" 버튼을 클릭하여 노드 정보를 내 보냅니다. Participant의 Peer를 모두 선택한 다음 "Export"를 클릭하고 결과 파일을 저장합니다.
+![](images/participant_export1.png)
+![](images/participant_export2.png)
 
 다른 Participant에 대해서도 이 과정을 반복하십시오.
 
 위에서 노드 정보 내보내기를 완료한 후에, Founder 화면에서 "Export / Import" 버튼과 "Import" 옵션을 통해 "Node"탭에서 가져올 수 있습니다. 위에서 Export한 원격 노드 구성의 두 세트를 모두 업로드하십시오. 
+![](images/founder_import_participant1.png)
+![](images/founder_import_participant2.png)
 
 프로세스가 정상적으로 완료되면 다른 Org의 Peer 노드가 목록에 나타나야 합니다. MSP(Membership Service Provider)를 통해 네트워크에 속한 조직을 추적할 수 있습니다.
 
 4. Network구성 Review하기
-지금까지 구축한 네트워크에 대한 구성도를 Founder "Nodes" 탭으로 이동하여 확인할 수 있습니다. Dealer의 피어 노드뿐 아니라 Detroitauto 노드가 목록에 있는지 확인하십시오. 그런 다음 아래 그림의 빨간색으로 표시된 토폴로지 보기 버튼을 클릭하십시오.
-  
+지금까지 구축한 네트워크에 대한 구성도를 Founder "Nodes" 탭으로 이동하여 확인할 수 있습니다. Dealer의 피어 노드뿐 아니라 Detroitauto 노드가 목록에 있는지 확인하십시오. 
+![](images/founder_import_participant3.png)
+
+그런 다음 아래 그림의 빨간색으로 표시된 토폴로지 보기 버튼을 클릭하십시오.
+![](images/founder_node_tree.png)
 
 이 네트워크 구성도는 이 Lab에서 처음에서 계획한 것과 유사합니다 (내부 채널로 detroitautoorderer가 추가됨). 토폴로지가 여기에 표시된 것과 같지 않거나 피어가 목록에 없으면 누락 된 항목을 확인한 다음 해당 구성 요소를 가져오거나 내보내거나, 채널 구성을 확인하십시오.
 
 ## 2. 체인코드 배포하기
 
 ### A. 체인코드 배포
-지금까지 네트워크를 구축했지만 실제로는 아직 아무 것도 하지 않았습니다. Chaincode는 블록체인 위에서 돌아가는 코드 입니다. Chaincode에서는 데이터 유형을 정의하고, 트랜잭션을 어떻게 실행할지에 대한 로직을 정의하고, 실행되는 조건을 검증하게 됩니다. Chaincode는 응용 프로그램에서 실행하는 트랜잭션을 통해 원장 상태를 초기화 하고 관리합니다. 체인 코드는 일반적으로 네트워크 구성원이 동의한 비즈니스 로직을 처리하므로 "Smart Contract" 이라고도 합니다.
+지금까지 네트워크를 구축했지만 아직 아무것도 하지 않았습니다. Chaincode는 블록체인 위에서 돌아가는 코드 입니다. Chaincode에서는 데이터 유형을 정의하고, 트랜잭션을 어떻게 실행할지에 대한 로직을 정의하고, 실행되는 조건을 검증하게 됩니다. Chaincode는 응용 프로그램에서 실행하는 트랜잭션을 통해 원장 상태를 초기화 하고 관리합니다. 체인 코드는 일반적으로 네트워크 구성원이 동의한 비즈니스 로직을 처리하므로 "Smart Contract" 이라고도 합니다.
 Chaincode는 golang (GO로도 알려짐)으로 작성되었지만, golang에 익숙하지 않은 경우 너무 걱정하지 않아도 됩니다. 이 데모에서는 chaincode carTrace.zip를 제공합니다.
 
 1. Founder에 체인코드 인스톨 & 초기화 
@@ -147,7 +154,9 @@ Chaincode는 golang (GO로도 알려짐)으로 작성되었지만, golang에 익
 
 첫 번째 화면은 다음과 같이 나오게 됩니다.
 
-![](images/)
+![](images/deploy_chaincode1.png)
+![](images/deploy_chaincode2.png)
+![](images/deploy_chaincode3.png)
 
 체인 코드를 Peer에 설치하려면 "Next"를 클릭하십시오. 성공 메시지가 나오게 되면, 체인 코드를 '인스턴스화'하라는 메시지가 나타나게 되는데, 이 단계는 체인 코드를 실행되는 채널에 넣는 단계입니다. 
 
@@ -157,19 +166,24 @@ Chaincode는 golang (GO로도 알려짐)으로 작성되었지만, golang에 익
 * 보통은 기본 endorse 정책이 적절할 수도 있지만, 여기서는 거래가 2 개의 조직 중 2 개가 서명해야하는 정책을 선택합니다.
 * initial parameter 변수는 기본값으로 남겨 두어야 합니다. 이 특정 체인 코드는 매개 변수를 요구하거나 사용하지 않으며 일시적인 맵이 필요 없습니다.
 
-완료된 구성은 다음과 같습니다.
- 
-![](images/)
+![](images/deploy_chaincode4.png)
 
 그런 다음 '다음'을 클릭하십시오. 이 과정은 다소 시간이 걸립니다.
 체인 코드를 인스턴스화 한 후에 REST 프록시를 통해 체인 코드를 노출할 수 있습니다. 이 단계는 선택 사항인데, 지금은 그냥 완료하도록 하겠습니다. 구성한 endorsement 정책으로 인해 이 설정을 나중에 변경해야 합니다.
+체인 코드를 노출하기 위해 REST 프록시를 선택합니다. 여러개가 만들어져 있는데, restproxy1을 선택합니다. 체인 코드가 deploy된 peer 들을 선택합니다.
 
-체인 코드를 노출하기 위해 REST 프록시를 선택합니다 (네트워크 구성 단계에서 gateway0.dauto에서 기본적으로 만들어 졌습니다. 체인 코드가 deploy된 peer 들을 선택합니다.)
-체인 코드는 이제 설정되었고, Founder 인 Detroit Auto의 samchannel에서 실행됩니다. 두 번째 채널인 judechannel에서도 이 체인 코드를 실행하려면 수동으로 인스턴스화 해야 합니다. 이렇게 하려면 설치된 carTrace를 확장하고 설치된 버전 (v1)에 대한 햄버거 메뉴를 클릭 한 다음 Instantiate를 선택하십시오.
-![](images/)
+![](images/deploy_chaincode5.png)
+![](images/deploy_chaincode6.png)
+
+체인 코드는 이제 설정되었고, Founder 인 Detroit Auto의 samchannel에서 실행됩니다. 
+두 번째 채널인 judechannel에서도 이 체인 코드를 실행하려면 수동으로 인스턴스화 해야 합니다. 이렇게 하려면 설치된 carTrace를 확장하고 설치된 버전 (v1)에 대한 햄버거 메뉴를 클릭 한 다음 Instantiate를 선택하십시오.
+
+![](images/instantiate_to_judechannel.png)
+
 이 화면에서 두 번째 채널을 선택하고 두 피어를 추가 한 다음 이전과 같이 endorsement 정책을 구성합니다.
 
-![](images/)
+![](images/instantiate_judechannel.png)
+
 
  "인스턴스화"를 클릭하십시오. 이 프로세스에는 다소 시간이 걸릴 수 있습니다.
 
@@ -177,10 +191,21 @@ Chaincode는 golang (GO로도 알려짐)으로 작성되었지만, golang에 익
 Participant의 각 콘솔에서 "Chaincodes" 탭으로 이동하십시오. 이번에는 체인 코드를 배포 할 때 체인 코드가 이미 Founder에 의해 채널에서 인스턴스화 되었으므로 Peer에 체인 코드만 설치하면 됩니다. 이렇게 하려면 체인 코드 배포의 'Advanced'모드를 한 번 더 사용합니다.
 "Install Chaincode" 단계에서 동일한 체인 코드 zip 파일을 업로드하십시오. 체인 코드의 이름과 버전이 Founder 에서 제공 한 이름과 동일하고 이 Org의 Peer 각각이 "Target Peers" 선택 항목에 포함되어 있는지 확인하십시오. 
 
-![](images/)
+![](images/participant_deploy_chaincode1.png)
+![](images/participant_deploy_chaincode2.png)
 
-인스턴스화는 Org 나 peer가 아닌 채널에 종속되기 때문에, 일단 체인 코드가 설치되면 인스턴스화 할 필요가 없습니다.  "Close" 버튼을 눌러 체인 코드 인스턴스화 단계에서 취소하십시오. 체인 코드 이름 옆에 있는 작은 화살표를 클릭하여 체인 코드 항목을 확장하고 이미 인스턴스화 된 채널이 있음을 확인할 수 있습니다.
-![](images/)
+인스턴스화는 Org 나 peer가 아닌 채널에 종속되기 때문에, 일단 체인 코드가 설치되면 인스턴스화 할 필요가 없습니다.  
+"Close" 버튼을 눌러 체인 코드 인스턴스화 단계에서 취소하십시오. 
+
+![](images/participant_deploy_chaincode3.png)
+
+체인 코드 이름 옆에 있는 작은 화살표를 클릭하여 체인 코드 항목을 확장하고 이미 인스턴스화 된 채널이 있음을 확인할 수 있습니다.
+
+![](images/participant_deploy_chaincode4.png)
+
+JudeDealer 에 대해서도 동일하게 체인코드를 deploy 합니다.
+
+![](images/participant_deploy_chaincode5.png)
 
 3. Peer정보 다시 Export하기
 체인 코드를 노출시키기 위해서는, 이 체인 코드가 Participant의 peer에서 사용 가능하다는 것을 Founder Org에게 알려주어야 합니다. 이렇게 하려면 노드 탭에서 'Export / Import' 버튼을 클릭해서 Participant의 Peer를 내보내는 방법으로 노드 정보를 한 번 더 내보내야 합니다.
