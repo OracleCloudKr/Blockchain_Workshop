@@ -211,17 +211,28 @@ JudeDealer 에 대해서도 동일하게 체인코드를 deploy 합니다.
 체인 코드를 노출시키기 위해서는, 이 체인 코드가 Participant의 peer에서 사용 가능하다는 것을 Founder Org에게 알려주어야 합니다. 이렇게 하려면 노드 탭에서 'Export / Import' 버튼을 클릭해서 Participant의 Peer를 내보내는 방법으로 노드 정보를 한 번 더 내보내야 합니다.
 노드 정보가 export되면, Founder의 Node 탭 에서 "Export / Import "버튼과 "Import "옵션을 통해 가져올 수 있습니다.
 
+![](images/participant_export_again.png)
+
+![](images/participant_export_again2.png)
+
+![](images/participant_import_again.png)
+
+![](images/participant_import_again2.png)
+
 참고 : 이 Lab에서는 두번 Export를 했는데, 처음에 채널에 Join하고 나서와 여기에서 입니다. 첫 번째 내보내기 / 가져 오기는 필요하지 않으며 네트워크 토폴로지의 유효성 검사를 하기 위한 것입니다.
 Participant 노드 정보를 Founder로 가져온 후 위의 지침에 따라 Founder의 노드 정보를 각 Participant에게 내보내야 합니다.
 
 4. Gateway 구성
 Blockchain Cloud 서비스에는 REST Proxy가 포함되어 있어 모든 HTTP 클라이언트에서 체인 코드 기능에 간단하게 액세스 할 수 있습니다. 
 체인 코드 배포 프로세스로 인해 REST 프록시를 통해 외부에서 체인 코드를 사용할 수 있게 되었지만, 앞에서 우리는 여러 Org에서 트랜잭션을 Endorsement 해야 한다고 지정했는데, 이 작업은 REST Proxy에서 default로 자동으로 설정되지 않습니다. 이를 위해서는 Proxy Configuration에서 피어 노드를 포함하도록 업데이트 해야 합니다.
-Nodes 탭으로 이동하여 Gateway 노드 (gateway0.dauto.com 또는 유사)를 찾으십시오. 햄버거 메뉴를 사용하여 "Edit Configuration"을 클릭하십시오. SamDealer의 peer를 samchannel 구성에 추가 한 다음 더하기 버튼을 클릭하여 judechannel에서 실행중인 체인 코드를 노출합니다 (최종 구성은 아래와 같습니다). 그런 다음 Submit을 클릭하십시오. 각 Org마다 이 단계를 반복해야합니다.
+Nodes 탭으로 이동하여 RestProxy 노드 4개 중에서 RestProxy 1을 사용했습니다. 햄버거 메뉴를 사용하여 "Edit Configuration"을 클릭하십시오. 
 
-![](images/)
+![](images/restproxy_edit1.png)
 
-변경 사항을 Submit하여 REST 프록시에 노출된 체인 코드 및 채널을 업데이트 하십시오.
+SamDealer의 peer를 samchannel 구성에 추가 한 다음 더하기 버튼을 클릭하여 judechannel에서 실행중인 체인 코드를 노출합니다 (최종 구성은 아래와 같습니다). 변경 사항을 Submit하여 REST 프록시에 노출된 체인 코드 및 채널을 업데이트 하십시오.
+
+![](images/restproxy_edit2.png)
+
 
 ### B. Sample Web Application 준비하기
 1. Sample Web App 배포
