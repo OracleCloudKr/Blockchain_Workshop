@@ -245,26 +245,26 @@ SamDealer의 peer를 samchannel 구성에 추가 한 다음 더하기 버튼을 
 Postman 관련해서 제공된 2개의 json 파일 중 WORKSHOP_ENV.postman_environment.json을 여십시오.
 그 중에서 아래에 붉은색으로 표시된 부분을 각자의 환경에 맞도록 수정합니다.
 
-<p><pre>
+<p>
     {
       "key": "resturl",
-      "value": "<span style="color:red">xxxxxxxxxxxx</span>.blockchain.ocp.oraclecloud.com/restproxy1",
+      "value": "**xxxxxxxxxxxx**.blockchain.ocp.oraclecloud.com/restproxy1",
       "description": "",
       "enabled": true
     },
     {
       "key": "cloudaccount",
-      "value": "<span style="color:red">username@xxxx.com</span>",
+      "value": "**username@xxxx.com**",
       "description": "",
       "enabled": true
     },
     {
       "key": "cloudpwd",
-      "value": "<span style="color:red">xxxxxx</span>",
+      "value": "**xxxxxx**",
       "description": "",
       "enabled": true
     }
-</pre></p>
+</p>
 
 먼저 Postman을 실행한 후 import 버튼을 눌러 창을 띄우고, 위 두 개의 파일을 import 합니다.
 
