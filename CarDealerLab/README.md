@@ -236,10 +236,8 @@ SamDealer의 peer를 samchannel 구성에 추가 한 다음 더하기 버튼을 
 
 ### B. Sample Web Application 준비하기
 1. Ledger 초기화
-
-이제 체인 코드가 업로드 되어 인스턴스화 되었으며 REST 게이트웨이를 통해 원격으로 호출 될 수 있으므로 체인 코드 기능을 호출하고 원장을 쿼리 할 수 있습니다. 원장은 현재 완전히 비어 있으므로 의미있는 데이터를 얻기 위해 장부에 샘플 데이터를 추가하도록 하겠습니다.
-이번 Lab에서는 Postman 툴을 통해 REST API들을 자동화해서 호출하는 방식으로 하게 됩니다.
-
+Oracle ABCS에서는 REST API를 통해 체인코드를 호출할 수 있습니다.
+Transaction을 호출하는 REST API의 형식은 다음과 같습니다.
 <pre><code>
 POST https://RESTAPI주소/bcsgw/rest/v1/transaction/invocation 
 
@@ -254,7 +252,11 @@ Body: {
    "chaincodeVer":"<chaincode_version>"
 }
 </code></pre>
+이를 사용해서 샘플 Application의 데이터를 초기화하는 과정을 진행하도록 하겠습니다.
 
+체인 코드가 업로드 되어 인스턴스화 되었으며 REST 게이트웨이를 통해 원격으로 호출 될 수 있으므로 체인 코드 기능을 호출하고 원장을 쿼리 할 수 있습니다. 원장은 현재 완전히 비어 있으므로 의미있는 데이터를 얻기 위해 장부에 샘플 데이터를 추가하도록 하겠습니다.
+
+이번 Lab에서는 Postman 툴을 통해 REST API들을 자동화해서 호출하는 방식으로 하게 됩니다.
 
 먼저 detroitauto(Founder)에서 REST Proxy주소를 복사해 둡니다. 아래 그림에서 가운데 붉은색으로 표시된 부분만 복사를 합니다. 
 ![](images/init_ledger1.png)
