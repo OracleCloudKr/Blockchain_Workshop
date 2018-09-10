@@ -243,7 +243,7 @@ SamDealer의 peer를 samchannel 구성에 추가 한 다음 더하기 버튼을 
 ![](images/init_ledger1.png)
 
 Postman 관련해서 제공된 2개의 json 파일 중 WORKSHOP_ENV.postman_environment.json을 여십시오.
-그 중에서 아래에 붉은색으로 표시된 부분을 각자의 환경에 맞도록 수정합니다.
+그 중에서 아래에 value중 굵게 표시된 부분을 각자의 환경에 맞도록 수정합니다.
 <pre>
 <code>
     {
@@ -254,13 +254,13 @@ Postman 관련해서 제공된 2개의 json 파일 중 WORKSHOP_ENV.postman_envi
     },
     {
       "key": "cloudaccount",
-      "value": "**username@xxxx.com**",
+      "value": "<b>username@xxxx.com</b>",
       "description": "",
       "enabled": true
     },
     {
       "key": "cloudpwd",
-      "value": "**xxxxxx**",
+      "value": "<b>xxxxxx</b>",
       "description": "",
       "enabled": true
     }
@@ -290,8 +290,8 @@ jude_web.zip
 founder_web.zip
 sam_web.zip
 각각 압축을 푸신후에 config.json을 아래와 같이 수정합니다.
-아래와 같이 붉은색 부분(gw_endpoint, username, password)을 각자의 환경에 맞게 수정합니다.
-<p><code><pre>
+아래와 같이 굵게 표시된 부분(gw_endpoint, username, password)을 각자의 환경에 맞게 수정합니다.
+<pre></code>
 {
   "logger": {
     "appenders": [
@@ -304,12 +304,12 @@ sam_web.zip
       "[all]": "DEBUG"
     }
   },
-  "gw_endpoint": "https://<span style="color:red">xxxxxxxxxxxx</span>.blockchain.ocp.oraclecloud.com:443",
+  "gw_endpoint": "https://<b>xxxxxxxxxxxx</b>.blockchain.ocp.oraclecloud.com:443",
   "channel": "detroit-auto-channel",
   "chaincode_name": "carTrace",
   "chaincode_ver": "v1",
-  "username": "<span style="color:red">username@xxx.com</span>",
-  "password": "<span style="color:red">xxxxxx</span>",
+  "username": "<b>username@xxx.com</b>",
+  "password": "<b>xxxxxx</b>",
   "title": "Detroit Autos",
   "configurable": false,
   "server_port": 8080,
@@ -317,7 +317,7 @@ sam_web.zip
     "detroit-auto-channel": ["samchannel","judechannel"]
   }
 }
-</pre></code></p>
+</code></pre>
 
 다시 zip으로 압축을 합니다.
 이 Sample Application은 Node.js로 작성되었으며 Oracle Application Container에 배포할 수 있도록 설정파일인 manifest.json를 포함하고 있습니다.
