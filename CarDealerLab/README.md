@@ -267,7 +267,7 @@ Body: {
 
 체인 코드가 업로드 되어 인스턴스화 되었으며 REST 게이트웨이를 통해 원격으로 호출 될 수 있으므로 체인 코드 기능을 호출하고 원장을 쿼리 할 수 있습니다. 원장은 현재 완전히 비어 있으므로 의미있는 데이터를 얻기 위해 장부에 샘플 데이터를 추가하도록 하겠습니다.
 
-이번 Lab에서는 Postman 툴을 통해 REST API들을 자동화해서 호출하는 방식으로 하게 됩니다.
+이번 Lab에서는 Postman툴([다운로드](https://www.getpostman.com/apps))을 통해 REST API들을 자동화해서 호출하는 방식으로 하게 됩니다.
 
 먼저 detroitauto(Founder)에서 REST Proxy주소를 복사해 둡니다. 아래 그림에서 가운데 붉은색으로 표시된 부분만 복사를 합니다. 
 ![](images/init_ledger1.png)
