@@ -2,6 +2,7 @@
 -----
 ## 사전 준비사항 ##
 + Oracle Cloud Trial Account
++ Postman 툴 ([다운로드](https://www.getpostman.com/apps))
 
 ## 소개 ##
 이번 Lab은 Oracle BlockChain를 활용하여 Car Dealer 회사에서 자동차 매매에 투명성을 확보할 수 있도록 해주는 Lab 입니다.

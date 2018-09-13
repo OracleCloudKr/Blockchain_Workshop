@@ -51,10 +51,10 @@ Go는 1.10.x 이상이 설치되어 있어야 하고 GOPATH가 시스템 환경 
 
 - **환경 준비**
 
-먼저, 모든 체인 코드는 [Chaincode interface]([)https://godoc.org/github.com/hyperledger/fabric/core/chaincode/shim#Chaincode)인 Init 및 Invoke 함수를 구현해야 합니다.
+먼저, 모든 체인 코드는 [Chaincode interface](https://godoc.org/github.com/hyperledger/fabric/core/chaincode/shim#Chaincode)인 Init 및 Invoke 함수를 구현해야 합니다.
 
-체인코드에서 필요한 dependancy를 추가 위해 go import 문을 추가합니다.
-체인 코드 shim 패키지와 peer protobuf 패키지를 가져옵니다. 
+체인코드에서 필요한 패키지를 추가하기 위해 go import 문을 추가합니다.
+체인코드 shim 패키지와 peer protobuf 패키지를 import합니다. 
 
 다음으로 Chaincode shim 함수의 SimpleAsset 구조체를 추가해 보겠습니다
 <pre></code>
@@ -186,9 +186,9 @@ func get(stub shim.ChaincodeStubInterface, args []string) (string, error) {
 }
 </code></pre>
 
-- **드인함수 추가**
+- **메인 함수 추가**
 
-마지막으로 shim.Start를 호출 할 main 함수를 추가해야 합니다.
+마지막으로 shim.Start를 호출할 main 함수를 추가해야 합니다.
 
 <pre><code>
 package main
@@ -212,11 +212,11 @@ func main() {
 }
 </code></pre>
 
-- **메인함수 추가**
-[체인 코드 프로그램 소스 링크](./sacc)
+- **전체 소스 코드**
+[체인 코드 프로그램 소스 링크](./sacc.go)
 
 
-- **Chaincode 빌드**
+- **Chaincode 테스트**
 
 
 - **Chaincode 실행**
