@@ -322,9 +322,12 @@ OBCS_Workshop을 선택하고, Environment에서 WORKSHOP_ENV 를 선택한 후 
 CarTrace Ledger를 호출하기 위한 Sample Web Application 3개를 Founder와 participant 별로 각각 필요합니다.
 먼저 아래의 링크에서 다운로드 받으세요.
 
-jude_web.zip
-founder_web.zip
-sam_web.zip
+[jude_web.zip](https://github.com/OracleCloudKr/Blockchain_Workshop/raw/master/CarDealerLab/artifacts/jude_web.zip)
+
+[founder_web.zip](https://github.com/OracleCloudKr/Blockchain_Workshop/raw/master/CarDealerLab/artifacts/founder_webapp.zip)
+
+[sam_web.zip](https://github.com/OracleCloudKr/Blockchain_Workshop/raw/master/CarDealerLab/artifacts/sam_web.zip)
+
 각각 압축을 푸신후에 config.json을 아래와 같이 수정합니다.
 아래와 같이 굵게 표시된 부분(gw_endpoint, username, password)을 각자의 환경에 맞게 수정합니다.
 <pre></code>
