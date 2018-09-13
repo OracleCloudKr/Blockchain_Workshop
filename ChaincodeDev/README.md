@@ -14,29 +14,27 @@
 
 # Hyperledger Chaincode 시작하기
 
-
-참고 문헌 : http://hyperledger-fabric.readthedocs.io/en/latest/index.html
+참고 : http://hyperledger-fabric.readthedocs.io/en/latest/index.html
 
 # Chaincode란?
 
 Chaincode는 Hyperleger위에 돌아가는 SmartContract 코드로서 Ledger를 저장할 때 비지니스 로직을 실행하게 할 수 있습니다. Chaincode는 Transaction에서 Ledger를 쿼리하거나 Update하기 위해 호출됩니다.
-현재 지원되는 언어는 Go와 Node.js로 작성합니다. (Java 도 지원될 예정)
+현재 Oracle ABCS 는 Hyperledger 1.1 버전과 호환되며, 지원되는 언어는 Go와 Node.js 입니다. (Java 도 지원 예정)
 
 # Chaincode API란?
-
-모든 Chaincode 프로그램은 Chaincode 인터페이스를 구현해야 합니다.
+Chaincode 프로그램은 Chaincode 인터페이스를 구현해야 합니다.
 - [Go](https://godoc.org/github.com/hyperledger/fabric/core/chaincode/shim#Chaincode)
 - Node.js
 
-다음은 Chaincode 인터페이스의 주요 메서드들입니다.
+다음은 Chaincode 인터페이스의 주요 함수들입니다.
 - **Init method** : Instantiate 나 upgrade 시에 호출
 - **Invoke method** : invoke 트랜잭션 요청을 받을 때 호출
 
-- shim 패키지에는 다른 인터페이스인 chaincodeStubInterface가 있는데 원장에 액세스해서 수정하고 chaincode들 사이에서 호출하는데 사용됩니다.
+- shim 패키지에는 다른 인터페이스인 chaincodeStubInterface가 있는데 ledger에 액세스해서 수정하고 chaincode들 사이에서 호출하는데 사용됩니다.
 
 # Simple Asset Chaincode
 
-간단히 원장에 assets(Key-value 쌍)을 생성하는 기본 chaincode를 만들도록 하겠습니다.
+간단히 ledger에 assets(Key-value 쌍)을 생성하는 기본 chaincode를 만들도록 하겠습니다.
 
 - **코드 저장 위치 선택**
 
@@ -51,14 +49,14 @@ Go는 1.10.x 이상이 설치되어 있어야 하고 GOPATH가 시스템 환경 
 이제 체인코드 애플리케이션을 $GOPATH/src/에 저장하시기 바랍니다.
 해당 디렉토리로 이동하여 sacc 라고 하는 새로운 파일을 하나 생성합니다.
 
-- **Housekeeping**
+- **환경 준비**
 
-먼저, 몇 가지 정리 작업부터 시작하겠습니다. 모든 체인 코드와 마찬가지로, 그것은 특히 체인코드 인터페이스, Init 및 Invoke 함수를 구현합니다. 
+먼저, 모든 체인 코드는 [Chaincode interface]([)https://godoc.org/github.com/hyperledger/fabric/core/chaincode/shim#Chaincode)인 Init 및 Invoke 함수를 구현해야 합니다.
 
-체인코드에 필요한 의존성에 대한 go import 문을 추가합니다.
-체인 코드 shim 패키지와 피어 protobuf 패키지를 가져옵니다. 
+체인코드에서 필요한 dependancy를 추가 위해 go import 문을 추가합니다.
+체인 코드 shim 패키지와 peer protobuf 패키지를 가져옵니다. 
 
-다음으로 Chaincode shim 함수의 수신기로 SimpleAsset 구조체를 추가해 보겠습니다
+다음으로 Chaincode shim 함수의 SimpleAsset 구조체를 추가해 보겠습니다
 <pre></code>
 package main
 import (
@@ -105,12 +103,12 @@ func (t *SimpleAsset) Init(stub shim.ChaincodeStubInterface) peer.Response {
 }
 </pre>
 
-입력값이 유효하다는 것을(2개의 파라미터 임을) 확인한 후에는 원장(ledger)에 입력 받은 값을 저장합니다. 
+입력값이 유효하다는 것을(2개의 파라미터 임을) 확인한 후에는 ledger에 입력 받은 값을 저장합니다. 
 이를 위해 인수로 전달 된 Key와 Value값으로 ChaincodeStubInterface.PutState를 호출 할 것입니다. 모든 것이 성공적으로 끝나면 Peer.Response 객체에 Success 값을 넣어 반환합니다.
 
 - **Invoking the Chaincode**
 
-체인코드에 들어 있는 값들을 호출하는 메서드를 구현해보도록 하겠습니다.
+체인코드에 들어 있는 값들을 호출하는 함수를 구현해보도록 하겠습니다.
 
 <pre><code>
 func (t *SimpleAsset) Invoke(stub shim.ChaincodeStubInterface) peer.Response {
@@ -155,7 +153,7 @@ func (t *SimpleAsset) Invoke(stub shim.ChaincodeStubInterface) peer.Response {
 
 이제 get, set 함수들을 구현해 보겠습니다. 
 
-원장의 상태에 액세스하려면 chaincode shim API의 ChaincodeStubInterface.PutState 및 ChaincodeStubInterface.GetState 함수를 활용해야 합니다.
+ledger의 상태에 액세스하려면 chaincode shim API의 ChaincodeStubInterface.PutState 및 ChaincodeStubInterface.GetState 함수를 활용해야 합니다.
 
 <pre><code>
 // ledger에 key/value를 저장합니다. 만약 키가 있으면 새로운 값으로 override 합니다.
@@ -188,9 +186,9 @@ func get(stub shim.ChaincodeStubInterface, args []string) (string, error) {
 }
 </code></pre>
 
-- **메인함수 추가**
+- **드인함수 추가**
 
-마지막으로 shim.Start 함수를 호출 할 main 함수를 추가해야 합니다.
+마지막으로 shim.Start를 호출 할 main 함수를 추가해야 합니다.
 
 <pre><code>
 package main
