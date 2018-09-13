@@ -263,7 +263,11 @@ Body: {
 먼저 detroitauto(Founder)에서 REST Proxy주소를 복사해 둡니다. 아래 그림에서 가운데 붉은색으로 표시된 부분만 복사를 합니다. 
 ![](images/init_ledger1.png)
 
-Postman 관련해서 제공된 2개의 json 파일 중 WORKSHOP_ENV.postman_environment.json을 여십시오.
+데이터를 초기화하는 Postman 스크립트 파일은 아래의 주소에서 다운로드 합니다.
+[OBCS_Workshop.postman_collection.json](https://github.com/OracleCloudKr/Blockchain_Workshop/raw/master/CarDealerLab/artifacts/OBCS_Workshop.postman_collection.json)
+[WORKSHOP_ENV.postman_environment.json](https://github.com/OracleCloudKr/Blockchain_Workshop/raw/master/CarDealerLab/artifacts/WORKSHOP_ENV.postman_environment.json)
+
+위 2개의 json 파일 중 WORKSHOP_ENV.postman_environment.json을 여십시오.
 그 중에서 아래에 value중 굵게 표시된 부분을 각자의 환경에 맞도록 수정합니다.
 <pre>
 <code>
