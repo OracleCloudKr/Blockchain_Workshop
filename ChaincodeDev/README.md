@@ -215,9 +215,35 @@ func main() {
 - **전체 소스 코드**
 [체인 코드 프로그램 소스 링크](./sacc.go)
 
-
 - **Chaincode 테스트**
+  
+go chaincode는 테스트를 할 수 있는 환경을 제공합니다.
+shim.NewMockStub를 이용하면 체인코드를 hyperledger에 배포하지 않고서도 로컬환경에서 테스트를 수행할 수 있습니다.
 
+````
+        // 테스트 stub 객체 생성
+        stub := shim.NewMockStub("mockChaincodeStub", new(Asset Name))
+        // 함수 호출(첫번째 인자는 function이름, 나머지는 파라미터)
+        invokeResult := stub.MockInvoke("1", args)
+````
+Asset Name은 위의 예제에서는 sacc 에서 struct 정의한 SimpleAsset을 입력을 합니다.
+
+아래는 invoke 함수를 호출하는 테스트 샘플 코드입니다.
+
+````
+func testQuery(t *testing.T) {
+	stub := shim.NewMockStub("mockChaincodeStub", new(SimpleAsset))
+	if stub == nil {
+		t.Fatalf("MockStub creation failed")
+	}
+	args := [][]byte{[]byte("invoke"), []byte("get"), []byte("A")}
+	invokeResult := stub.MockInvoke("1", args)
+
+	if invokeResult.Status != 200 {
+		t.Errorf("returned non-OK status, got: %d, want: %d.", invokeResult.Status, 200)
+	}
+}
+````
 
 - **Chaincode 실행**
 이제 a 값이 20으로 변경하기 위한 호출을 실행합니다.
