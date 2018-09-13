@@ -146,6 +146,7 @@ Chaincode는 golang (GO로도 알려짐)으로 작성되었지만, golang에 익
 [carTrace.zip 다운로드](https://github.com/OracleCloudKr/Blockchain_Workshop/raw/master/CarDealerLab/artifacts/carTrace.zip)
 
 1. Founder에 체인코드 인스톨 & 초기화 
+   
 체인 코드를 설치하려면 Founder Org의 콘솔에서 "Chaincodes"탭으로 이동 한 다음 "Deploy a New Chaincode" 버튼을 클릭하십시오. 여기에서 로컬 컴퓨터에서 가져 오거나, 자동화 된 빌드 프로세스의 마지막 단계인 Rmote URL을 참조하여 체인 코드를 업로드 할 수 있습니다.
 
 체인 코드를 설치하는 데는 두 가지 옵션이 있습니다. 한 번 클릭으로 체인 코드를 설정하고 여러 가지 기본값을 포함하도록 설계된 'Quick Deploy' 또는 체인 코드 설정 프로세스에 대한 보다 세부적인 제어를 위한 고급 옵션이 있습니다.
@@ -163,6 +164,7 @@ Chaincode는 golang (GO로도 알려짐)으로 작성되었지만, golang에 익
 체인 코드를 Peer에 설치하려면 "Next"를 클릭하십시오. 성공 메시지가 나오게 되면, 체인 코드를 '인스턴스화'하라는 메시지가 나타나게 되는데, 이 단계는 체인 코드를 실행되는 채널에 넣는 단계입니다. 
 
 이 단계에서 다음을 수행해야 합니다.
+
 * 체인 코드를 인스턴스화 할 채널을 선택하십시오.
 * 채널에 참여할 로컬 Peer를 선택하십시오.
 * 보통은 기본 endorse 정책이 적절할 수도 있지만, 여기서는 거래가 2 개의 조직 중 2 개가 서명해야하는 정책을 선택합니다.
@@ -189,7 +191,8 @@ Chaincode는 golang (GO로도 알려짐)으로 작성되었지만, golang에 익
 
  "인스턴스화"를 클릭하십시오. 이 프로세스에는 다소 시간이 걸릴 수 있습니다.
 
-2. Participant에 체인코드 인스톨과 초기화 
+1. Participant에 체인코드 인스톨과 초기화 
+   
 Participant의 각 콘솔에서 "Chaincodes" 탭으로 이동하십시오. 이번에는 체인 코드를 배포 할 때 체인 코드가 이미 Founder에 의해 채널에서 인스턴스화 되었으므로 Peer에 체인 코드만 설치하면 됩니다. 이렇게 하려면 체인 코드 배포의 'Advanced'모드를 한 번 더 사용합니다.
 "Install Chaincode" 단계에서 동일한 체인 코드 zip 파일을 업로드하십시오. 체인 코드의 이름과 버전이 Founder 에서 제공 한 이름과 동일하고 이 Org의 Peer 각각이 "Target Peers" 선택 항목에 포함되어 있는지 확인하십시오. 
 
@@ -209,7 +212,9 @@ JudeDealer 에 대해서도 동일하게 체인코드를 deploy 합니다.
 
 ![](images/participant_deploy_chaincode5.png)
 
-3. Peer정보 다시 Export하기
+2. Peer정보 다시 Export하기
+
+
 체인 코드를 노출시키기 위해서는, 이 체인 코드가 Participant의 peer에서 사용 가능하다는 것을 Founder Org에게 알려주어야 합니다. 이렇게 하려면 노드 탭에서 'Export / Import' 버튼을 클릭해서 Participant의 Peer를 내보내는 방법으로 노드 정보를 한 번 더 내보내야 합니다.
 노드 정보가 export되면, Founder의 Node 탭 에서 "Export / Import "버튼과 "Import "옵션을 통해 가져올 수 있습니다.
 
@@ -224,7 +229,8 @@ JudeDealer 에 대해서도 동일하게 체인코드를 deploy 합니다.
 참고 : 이 Lab에서는 두번 Export를 했는데, 처음에 채널에 Join하고 나서와 여기에서 입니다. 첫 번째 내보내기 / 가져 오기는 필요하지 않으며 네트워크 토폴로지의 유효성 검사를 하기 위한 것입니다.
 Participant 노드 정보를 Founder로 가져온 후 위의 지침에 따라 Founder의 노드 정보를 각 Participant에게 내보내야 합니다.
 
-4. Gateway 구성
+3. Gateway 구성
+   
 Blockchain Cloud 서비스에는 REST Proxy가 포함되어 있어 모든 HTTP 클라이언트에서 체인 코드 기능에 간단하게 액세스 할 수 있습니다. 
 체인 코드 배포 프로세스로 인해 REST 프록시를 통해 외부에서 체인 코드를 사용할 수 있게 되었지만, 앞에서 우리는 여러 Org에서 트랜잭션을 Endorsement 해야 한다고 지정했는데, 이 작업은 REST Proxy에서 default로 자동으로 설정되지 않습니다. 이를 위해서는 Proxy Configuration에서 피어 노드를 포함하도록 업데이트 해야 합니다.
 Nodes 탭으로 이동하여 RestProxy 노드 4개 중에서 RestProxy 1을 사용했습니다. 햄버거 메뉴를 사용하여 "Edit Configuration"을 클릭하십시오. 
@@ -237,7 +243,9 @@ SamDealer의 peer를 samchannel 구성에 추가 한 다음 더하기 버튼을 
 
 
 ### B. Sample Web Application 준비하기
+
 1. Ledger 초기화
+
 Oracle ABCS에서는 REST API를 통해 체인코드를 호출할 수 있습니다.
 Transaction을 호출하는 REST API의 형식은 다음과 같습니다.
 <pre><code>
@@ -264,7 +272,9 @@ Body: {
 ![](images/init_ledger1.png)
 
 데이터를 초기화하는 Postman 스크립트 파일은 아래의 주소에서 다운로드 합니다.
+
 [OBCS_Workshop.postman_collection.json](https://github.com/OracleCloudKr/Blockchain_Workshop/raw/master/CarDealerLab/artifacts/OBCS_Workshop.postman_collection.json)
+
 [WORKSHOP_ENV.postman_environment.json](https://github.com/OracleCloudKr/Blockchain_Workshop/raw/master/CarDealerLab/artifacts/WORKSHOP_ENV.postman_environment.json)
 
 위 2개의 json 파일 중 WORKSHOP_ENV.postman_environment.json을 여십시오.
@@ -307,7 +317,7 @@ OBCS_Workshop을 선택하고, Environment에서 WORKSHOP_ENV 를 선택한 후 
 ![](images/initledger4.png)
 
 
-2. Sample Web App 배포
+1. Sample Web App 배포
 CarTrace Ledger를 호출하기 위한 Sample Web Application 3개를 Founder와 participant 별로 각각 필요합니다.
 먼저 아래의 링크에서 다운로드 받으세요.
 
@@ -407,6 +417,7 @@ Detroit Auto 샘플 애플리케이션에서는 모든 쿼리를 실행할 수 �
 ![](images/sample_app_trace.png)
 
 5. REST API를 통해 Transaction 실행
+
 CarTrace의 모든 트랜잭션과 결과들은 REST API로 호출할 수 있습니다.
 REST 호출을 실행할 때 두 가지 옵션이 있습니다.
 - PostMan과 같은 Tool 사용
