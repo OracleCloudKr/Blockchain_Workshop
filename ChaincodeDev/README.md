@@ -82,9 +82,9 @@ func (t *SimpleAsset) Init(stub shim.ChaincodeStubInterface) peer.Response {
 
 }</code></pre>
 
-`
+|
 주의 : Chaincode upgrade 역시 이 함수를 호출합니다. 기존 코드를 upgrade할 Chaincode를 작성할 때 Init 함수를 적절하게 수정해야 합니다. 특히 Upgrade의 일부로서 초기화할 것이 아무것도 없는 경우 위와 같이 비어 있는 Init 메소드를 제공해야 합니다.
-`
+|
 
 다음으로 Init 호출될때 특정값들이 정상적으로 들어 왔는지 유효성 검사를 하는 코드를 넣도록 하겠습니다.
 입력 받은 값을 얻기 위해서는 ChaincodeStubInterface.GetStringArgs 함수를 사용합니다.
@@ -106,7 +106,7 @@ func (t *SimpleAsset) Init(stub shim.ChaincodeStubInterface) peer.Response {
 }
 </pre>
 
-입력값이 유효(2자리)하다는 것을 확인한 후에는 원장(ledger)에 초기 값을 저장합니다. 
+입력값이 유효하다는 것을(2개의 파라미터 임을) 확인한 후에는 원장(ledger)에 입력 받은 값을 저장합니다. 
 이를 위해 인수로 전달 된 Key와 Value값으로 ChaincodeStubInterface.PutState를 호출 할 것입니다. 모든 것이 성공적으로 끝나면 Peer.Response 객체에 Success 값을 넣어 반환합니다.
 
 - **Invoking the Chaincode**
@@ -189,7 +189,7 @@ func get(stub shim.ChaincodeStubInterface, args []string) (string, error) {
 }
 </code></pre>
 
-- **전체 코드**
+- **메인함수 추가**
 
 마지막으로 shim.Start 함수를 호출 할 main 함수를 추가해야 합니다.
 
@@ -215,6 +215,7 @@ func main() {
 }
 </code></pre>
 
+- **메인함수 추가**
 [체인 코드 프로그램 소스 링크](./sacc)
 
 
