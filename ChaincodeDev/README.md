@@ -10,8 +10,6 @@
 
 # Lab 시작
 
-## 1. 
-
 # Hyperledger Chaincode 시작하기
 
 참고 : http://hyperledger-fabric.readthedocs.io/en/latest/index.html
@@ -45,6 +43,12 @@ Go는 1.10.x 이상이 설치되어 있어야 하고 GOPATH가 시스템 환경 
 또한 PATH에 GOPATH/bin 이 잡혀 있어야 합니다.
 
 [Go 다운로드](https://golang.org/dl/)
+
+아래 명령어를 command에서 실행해서 go에서 사용할 chaincode package를 다운로드 합니다.
+
+| go get -u github.com/hyperledger/fabric/core/chaincode/shim |
+| --- |
+
 
 이제 체인코드 애플리케이션을 $GOPATH/src/에 저장하시기 바랍니다.
 해당 디렉토리로 이동하여 sacc 라고 하는 새로운 파일을 하나 생성합니다.
@@ -265,21 +269,43 @@ func TestQuery(t *testing.T) {
 [체인 코드 프로그램 소스 링크](./sacc_test.go)
 
 Visual Studio Code 툴에서는 자동으로 go test를 호출하는 plugin을 지원합니다.
-sacc_test.go 파일을 열게 되면 Visual Studio Code에서는 자동으로 인식을 하게 됩니다.
+sacc_test.go 파일을 열게 되면 Visual Studio Code에서는 자동으로 plugin을 인식을 하게 됩니다.
 
-* 윈도우의 경우에는 아래를 cmd 창에서 실행하시기 바랍니다.
+오른쪽 아래에 다음과 같이 plugin을 설치하라는 메세지가 뜨게 되면 Install All 버튼을 눌러 관련 plugin을 모두 설치합니다.
+
+![](images/plugin_install1.png)
+
+* 만약 메세지가 뜨지 않을 경우에는 cmd 창에서 아래 명령어를 직접 실행하시면 됩니다.
 
 | go get -v github.com/ramya-rao-a/go-outline |
 | --- |
 
+설치를 하게 되면 아래와 같이 plugin 모듈이 하나씩 설치가 되게 됩니다.
+![](images/plugin_install2.png)
 
-- **Chaincode 실행**
-이제 a 값이 20으로 변경하기 위한 호출을 실행합니다.
+정상적으로 설치가 되면 sacc_test.go 파일에 함수이름 위에 직접 테스트를 할 수 있는 명령어가 자동으로 뜨게 됩니다.
 
-| peer chaincode invoke -n mycc -c &#39;{&quot;Args&quot;:[&quot;set&quot;, &quot;a&quot;, &quot;20&quot;]}&#39; -C myc |
-| --- |
+![](images/sacc_function_test.png)
 
-마지막으로 a가 20으로 변경되었는지 쿼리해봅니다.
+이제 TestQuery 위에 있는 run test를 눌러서 실행을 해봅니다.
 
-| peer chaincode query -n mycc -c &#39;{&quot;Args&quot;:[&quot;query&quot;,&quot;a&quot;]}&#39; -C myc |
-| --- |
+<pre><code>
+Running tool: /usr/local/go/bin/go test -timeout 30s -run ^TestQuery$
+
+Payload=100PASS
+ok  	/Users/user1/Workshop/Blockchain_Workshop/ChaincodeDev	0.026s
+Success: Tests passed.
+</code></pre>
+
+# Chaincode OABCS에 배포
+
+위와 같이 정상적으로 테스트가 끝나면 OABCS에 체인코드를 배포할 수 있습니다.
+OABCS는 .go 파일을 zip으로 압축해서 배포하면 됩니다.
+먼저 sacc.go 파일을 zip으로 압축합니다.
+
+OABCS 의 콘솔에 접속합니다.
+이전 Lab에서 만든 detriot 인스턴스의 Dashboard Console로 이동합니다.
+![](../CarDealerLab/images/create_instance2.png)
+
+# Chaincode REST로 호출하기
+
