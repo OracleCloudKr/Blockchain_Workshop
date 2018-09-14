@@ -218,6 +218,15 @@ func main() {
 - **Chaincode 테스트**
   
 go chaincode는 테스트를 할 수 있는 환경을 제공합니다.
+테스트용 파일을 만드는 데는 몇가지 규칙이 있습니다.
+
+1. 파일명은 _test.go 로 생성합니다.
+2. "testing" 을 import 합니다.
+3. shim.NewMockStub 객체를 생성합니다.
+4. 테스트 함수명은 대문자로 Test로 시작하도록 만듭니다.
+5. 동일한 디렉토리에 여러개의 test 파일을 생성할 수 있지만 함수명은 유일해야 합니다.
+6. 체인코드에서 GetHistoryForKey 등의 함수를 호출한 경우는 현재 테스트가 지원되지 않습니다.
+
 shim.NewMockStub를 이용하면 체인코드를 hyperledger에 배포하지 않고서도 로컬환경에서 테스트를 수행할 수 있습니다.
 
 ````
@@ -231,19 +240,36 @@ Asset Name은 위의 예제에서는 sacc 에서 struct 정의한 SimpleAsset을
 아래는 invoke 함수를 호출하는 테스트 샘플 코드입니다.
 
 ````
-func testQuery(t *testing.T) {
+func TestQuery(t *testing.T) {
 	stub := shim.NewMockStub("mockChaincodeStub", new(SimpleAsset))
 	if stub == nil {
 		t.Fatalf("MockStub creation failed")
 	}
-	args := [][]byte{[]byte("invoke"), []byte("get"), []byte("A")}
+	args := [][]byte{[]byte("set"), []byte("A"), []byte("100")}
 	invokeResult := stub.MockInvoke("1", args)
+
+	args = [][]byte{[]byte("get"), []byte("A")}
+	invokeResult = stub.MockInvoke("1", args)
+	fmt.Printf("Payload=%s", invokeResult.GetPayload())
 
 	if invokeResult.Status != 200 {
 		t.Errorf("returned non-OK status, got: %d, want: %d.", invokeResult.Status, 200)
 	}
 }
+
 ````
+
+- **전체 테스트 소스 코드**
+[체인 코드 프로그램 소스 링크](./sacc_test.go)
+
+Visual Studio Code 툴에서는 자동으로 go test를 호출하는 plugin을 지원합니다.
+sacc_test.go 파일을 열게 되면 Visual Studio Code에서는 자동으로 인식을 하게 됩니다.
+
+* 윈도우의 경우에는 아래를 cmd 창에서 실행하시기 바랍니다.
+
+| go get -v github.com/ramya-rao-a/go-outline |
+| --- |
+
 
 - **Chaincode 실행**
 이제 a 값이 20으로 변경하기 위한 호출을 실행합니다.
