@@ -114,3 +114,8 @@ Chaincode는 golang (GO로도 알려짐)으로 작성되었지만, golang에 익
     변경 사항을 Submit하여 REST 프록시에 노출된 체인 코드 및 채널을 업데이트 하십시오.
 
     ![](images/restproxy_edit2.png)
+
+
+---
+
+[이전 Lab으로 이동](README.md)
