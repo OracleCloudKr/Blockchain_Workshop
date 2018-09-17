@@ -268,7 +268,7 @@ go chaincode는 테스트를 할 수 있는 환경을 제공합니다.
 
     전체 테스트 소스 코드는 아래의 링크에서 받을 수 있습니다.
 
-    [체인 코드 프로그램 소스 링크](./sacc_test.go)
+    [테스트 프로그램 소스 링크](./sacc_test.go)
 
 ## Chaincode 테스트 plugin 설치
 Visual Studio Code 툴에서는 자동으로 go test를 호출하는 plugin을 지원합니다.

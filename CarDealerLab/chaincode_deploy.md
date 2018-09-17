@@ -14,7 +14,7 @@ Chaincode는 golang (GO로도 알려짐)으로 작성되었지만, golang에 익
 
     이 Lab에서는 고급 옵션을 사용하여 프로세스를 단계별로 수행하고 각 설정의 의미를 설명하지만 대부분의 개발 시나리오에서 빠른 배포로 하시면 됩니다.
 
-    고급 체인 코드 배포의 첫 번째 단계에서는 연관된 peer 각각에 체인 코드를 설치합니다. 이를 위해 우리는 chaincode 이름 (여기서 우리는 'carTrace'를 사용하고 있습니다), 버전 (v1) 그리고 어느 피어를 배포 할 것인지를 입력 할 수 있습니다. 이 경우 모든 peer에게 배포 할 예정이지만, Transaction을 검증하는 peer와 Ledger 사본을 단순히 저장하는 peer가 있습니다. (빠른 배포는 모든 peer에게 배포됩니다). chaincode가 들어있는 제공된 carTrace.zip의 사본을 업로드 할 수도 있습니다.
+    고급 체인 코드 배포의 첫 번째 단계에서는 연관된 peer 각각에 체인 코드를 설치합니다. 이를 위해 우리는 chaincode 이름 (여기서 우리는 'carTrace'를 사용하고 있습니다), 버전 (v1) 그리고 어느 피어를 배포 할 것 인지를 입력 할 수 있습니다. 이 경우 모든 peer에게 배포 할 예정이지만, Transaction을 검증하는 peer와 Ledger 사본을 단순히 저장하는 peer가 있습니다. (빠른 배포는 모든 peer에게 배포됩니다). chaincode가 들어있는 제공된 carTrace.zip의 사본을 업로드 할 수도 있습니다.
 
     주의 : 체인 코드가 설치된 모든 Org에서 유일하게 유지되므로 체인 코드 이름에 주의하십시오.
 
@@ -38,6 +38,13 @@ Chaincode는 golang (GO로도 알려짐)으로 작성되었지만, golang에 익
 
     ![](images/deploy_chaincode4.png)
 
+    ~~~
+     [Endorsement Policy]
+      Endorsement(검증) 를 어느 Org, 어느 peer에서 할 것인지를 선택하는 과정입니다. 여기에서 MSP가 detroitauto와 samdealer로 선택을 하게 되면, 두 개의 Org에서 모두 검증(endorse)를 하게 됩니다. 
+      이 검증을 수행할 때 Siged by 2 of 2 Organizations above 는 2개의 Org중 2개가 검증에 통과하면 성공을 의미한다고 하는 설정입니다.|
+      ~~~
+       
+
     그런 다음 '다음'을 클릭하십시오. 이 과정은 다소 시간이 걸립니다.
 
     체인 코드를 인스턴스화 한 후에 REST 프록시를 통해 체인 코드를 노출할 수 있습니다. 이 단계는 선택 사항인데, 지금은 그냥 완료하도록 하겠습니다. 구성한 endorsement 정책으로 인해 이 설정을 나중에 변경해야 합니다.
@@ -60,7 +67,7 @@ Chaincode는 golang (GO로도 알려짐)으로 작성되었지만, golang에 익
 
      "인스턴스화"를 클릭하십시오. 이 프로세스에는 다소 시간이 걸릴 수 있습니다.
 
-1. Participant에 체인코드 인스톨과 초기화 
+2. Participant에 체인코드 인스톨과 초기화 
    
     Participant의 각 콘솔에서 "Chaincodes" 탭으로 이동하십시오. 이번에는 체인 코드를 배포 할 때 체인 코드가 이미 Founder에 의해 채널에서 인스턴스화 되었으므로 Peer에 체인 코드만 설치하면 됩니다. 이렇게 하려면 체인 코드 배포의 'Advanced'모드를 한 번 더 사용합니다.
 
@@ -82,7 +89,7 @@ Chaincode는 golang (GO로도 알려짐)으로 작성되었지만, golang에 익
 
     ![](images/participant_deploy_chaincode5.png)
 
-2. Peer정보 다시 Export하기
+3. Peer정보 다시 Export하기
 
     체인 코드를 노출시키기 위해서는, 이 체인 코드가 Participant의 peer에서 사용 가능하다는 것을 Founder Org에게 알려주어야 합니다. 이렇게 하려면 노드 탭에서 'Export / Import' 버튼을 클릭해서 Participant의 Peer를 내보내는 방법으로 노드 정보를 한 번 더 내보내야 합니다.
 
@@ -99,7 +106,7 @@ Chaincode는 golang (GO로도 알려짐)으로 작성되었지만, golang에 익
     참고 : 이 Lab에서는 두번 Export를 했는데, 처음에 채널에 Join하고 나서와 여기에서 입니다. 첫 번째 내보내기 / 가져 오기는 필요하지 않으며 네트워크 토폴로지의 유효성 검사를 하기 위한 것입니다.
     Participant 노드 정보를 Founder로 가져온 후 위의 지침에 따라 Founder의 노드 정보를 각 Participant에게 내보내야 합니다.
 
-3. Gateway 구성
+4. Gateway 구성
    
     Blockchain Cloud 서비스에는 REST Proxy가 포함되어 있어 모든 HTTP 클라이언트에서 체인 코드 기능에 간단하게 액세스 할 수 있습니다. 
 
