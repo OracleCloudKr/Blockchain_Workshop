@@ -45,4 +45,5 @@
 [Web App에서 BlockChain 호출하기 로 이동](invoke_blockchain.md)
 
 -----
-<b>수고하셨습니다. 모든 Lab 과정을 끝내셨습니다.</b>
+
+[이전 Lab으로 이동](../README.md)
