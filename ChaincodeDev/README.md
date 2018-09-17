@@ -301,11 +301,36 @@ Success: Tests passed.
 
 위와 같이 정상적으로 테스트가 끝나면 OABCS에 체인코드를 배포할 수 있습니다.
 OABCS는 .go 파일을 zip으로 압축해서 배포하면 됩니다.
-먼저 sacc.go 파일을 zip으로 압축합니다.
 
-OABCS 의 콘솔에 접속합니다.
-이전 Lab에서 만든 detriot 인스턴스의 Dashboard Console로 이동합니다.
+1. 먼저 sacc.go 파일을 zip으로 압축합니다.
+
+1. OABCS 의 콘솔에 접속합니다.
+
+   이전 Lab에서 만든 detriot 인스턴스의 Dashboard Console로 이동합니다.
 ![](../CarDealerLab/images/create_instance2.png)
 
-# Chaincode REST로 호출하기
+1. Chaincodes 탭으로 이동한 후 'Deploy a New Chaincode' 버튼을 클릭합니다.
 
+    ![](images/deploy1.png)
+    
+1. Deploy Chaincode에서 이번에는 Quick Deployment를 사용해서 바로 Deploy를 선택합니다.
+   
+   이 옵션을 선택하게 되면 Deploy함과 동시에 모든 peer 에 대해서 instantiate까지 한번에 해주게 됩니다.
+
+    ![](images/deploy2.png)
+
+1. 아래 화면과 동일하게 선택,입력하고, 초기 파라미터로 ["a", "100"] 을 입력합니다. 
+    
+    앞에서 압축한 chaincode zip 파일을 선택합니다.
+
+    ![](images/deploy3.png)
+
+1. submit을 누르면 정상적으로 Deploy가 완료되고 Instantiate가 되게 됩니다.
+   
+# Chaincode REST로 호출하기
+이제 Deploy된 체인코드를 REST Api를 통해 호출해 보도록 하겠습니다.
+1. Postman을 다시 열고 좌측 메뉴에서 기존 Request들 중에 마지막에 있는 Query Vehicle을 선택하고 Duplicate를 해서 복사를 합니다.
+   ![](images/restcall1.png)
+2. 이름을 Query sacc로 변경하고 Body를 클릭한 후 아래의 값으로 입력합니다.
+   ![](images/restcall2.png)
+3. Send 버튼을 클릭하면 정상적으로 호출이 되고 a값으로 앞에서 체인코드 초기화 때 입력한 100 값이 반환되는 것을 확인할 수 있습니다.
