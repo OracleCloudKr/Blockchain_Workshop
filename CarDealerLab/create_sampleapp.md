@@ -143,3 +143,6 @@ CarTrace Ledger를 호출하기 위한 Sample Web Application 3개를 Founder와
 
 1. 모두 생성이 되게 되면 아래와 같이 나오게 되고, 아래 붉은 색으로 되어 있는 URL을 클릭하면 바로 web application에 접근할 수 있습니다. 각 링크를 눌러서 화면이 정상적으로 뜨는지 확인해보시기 바랍니다.
 ![](images/accs7.png)
+
+---
+[이전 Lab으로 이동](README.md)

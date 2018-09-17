@@ -34,3 +34,6 @@ OABCS에 접속하기 위해서는 Cloud Console에서 다음과 같이 선택�
 
 1. 동일한 과정을 거쳐 Sam Dealer 를 생성하도록 하겠습니다.
 ![](images/create_samdealer.png)
+
+---
+[이전 Lab으로 이동](README.md)

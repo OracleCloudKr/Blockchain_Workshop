@@ -1,4 +1,4 @@
-## Founder에 Participant Org Join
+# Founder에 Participant Org Join
 ### A. Founder에 JudeDealer Participant 조직(Organization)을 Join하기
 1. 네트워크가 생성되면 각각의 관리 콘솔에 액세스 할 수 있습니다.  
 먼저 judedealer 의 콘솔에 접속합니다.
@@ -39,3 +39,6 @@ Participant의 인증서를 가져오기 위해 Participant Org의 콘솔을 엽
 
 ### B. Founder에 SamDealer Participant 조직(Organization)을 Join하기
 위와 동일한 방식으로 SamDealer Org를 Founder에 추가합니다. 
+
+---
+[이전 Lab으로 이동](README.md)

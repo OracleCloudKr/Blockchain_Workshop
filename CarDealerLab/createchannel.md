@@ -22,7 +22,7 @@ Multi-Party 블록 체인 네트워크를 설정하는 마지막 단계는 각 �
     Founder가 다른 Org를 Transaction 의 endorser로 포함 시키려면 다른 피어 노드에 대해 알아야합니다. 이렇게 하기 위해 우리는 노드 정보를 내보내고 Founder에서 가져옵니다.
     Participant Org에서 "Nodes" 탭으로 이동 한 다음 "Export / Import" 버튼을 클릭하여 노드 정보를 내 보냅니다. Participant의 Peer를 모두 선택한 다음 "Export"를 클릭하고 결과 파일을 저장합니다.
     ![](images/participant_export1.png)
-    
+
     ![](images/participant_export2.png)
 
     다른 Participant에 대해서도 이 과정을 반복하십시오.
@@ -41,3 +41,6 @@ Multi-Party 블록 체인 네트워크를 설정하는 마지막 단계는 각 �
     ![](images/founder_node_tree.png)
 
     이 네트워크 구성도는 이 Lab에서 처음에서 계획한 것과 유사합니다 (내부 채널로 detroitautoorderer가 추가됨). 토폴로지가 여기에 표시된 것과 같지 않거나 피어가 목록에 없으면 누락 된 항목을 확인한 다음 해당 구성 요소를 가져오거나 내보내거나, 채널 구성을 확인하십시오.
+
+---
+[이전 Lab으로 이동](README.md)
