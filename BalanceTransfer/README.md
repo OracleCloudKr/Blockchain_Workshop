@@ -79,3 +79,6 @@ TxID의 왼쪽 화살표를 클릭하면 아래에 상세 호출 내용이 나�
 ![](images/channel_data5.png)
 
 이처럼 Transaction이 발생할 때마다 저장된 내역을 Console에서 쉽게 조회할 수 있습니다.
+
+-----
+<b>수고하셨습니다. 모든 Lab 과정을 끝내셨습니다.</b>

@@ -17,8 +17,8 @@ type SimpleAsset struct {
 func (t *SimpleAsset) Init(stub shim.ChaincodeStubInterface) peer.Response {
 	// Get the args from the transaction proposal
 	args := stub.GetStringArgs()
-	//fn, args := stub.GetFunctionAndParameters()
 	// args[0] : function name
+	//fn, args := stub.GetFunctionAndParameters()
 
 	if len(args) != 3 {
 		return shim.Error("Incorrect arguments. Expecting a key and a value")
