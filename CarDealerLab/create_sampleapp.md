@@ -123,6 +123,9 @@ CarTrace Ledger를 호출하기 위한 Sample Web Application 3개를 Founder와
 1. 3개 회사의 각 application을 배포하도록 하기 위해 Oracle Cloud Dashboard의 상단의 햄버거 모양을 클릭한 후 왼쪽 메뉴에서 Application Container를 클릭합니다.
 ![](images/goto_accs.png)
 
+1. 처음 접속할 경우 나오는 welcome page에서 Go to console을 클릭합니다.
+![](images/accs_gotoconsole.png)
+
 1. Create Application을 클릭합니다.
 ![](images/accs1.png)
 
