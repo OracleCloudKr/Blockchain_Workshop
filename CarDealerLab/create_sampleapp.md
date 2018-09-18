@@ -79,11 +79,11 @@ Body: {
 CarTrace Ledger를 호출하기 위한 Sample Web Application 3개를 Founder와 participant 별로 각각 필요합니다.
 1. 먼저 아래의 링크에서 다운로드 받으세요.
 
-    [jude_web.zip](https://github.com/OracleCloudKr/Blockchain_Workshop/raw/master/CarDealerLab/artifacts/jude_web.zip)
+    [jude_webapp.zip](https://github.com/OracleCloudKr/Blockchain_Workshop/raw/master/CarDealerLab/artifacts/jude_webapp.zip)
 
-    [founder_web.zip](https://github.com/OracleCloudKr/Blockchain_Workshop/raw/master/CarDealerLab/artifacts/founder_webapp.zip)
+    [founder_webapp.zip](https://github.com/OracleCloudKr/Blockchain_Workshop/raw/master/CarDealerLab/artifacts/founder_webapp.zip)
 
-    [sam_web.zip](https://github.com/OracleCloudKr/Blockchain_Workshop/raw/master/CarDealerLab/artifacts/sam_web.zip)
+    [sam_webapp.zip](https://github.com/OracleCloudKr/Blockchain_Workshop/raw/master/CarDealerLab/artifacts/sam_webapp.zip)
 
 1. 각각 압축을 푸신후에 config.json을 아래와 같이 수정합니다.
 
