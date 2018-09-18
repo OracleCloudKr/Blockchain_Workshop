@@ -1,4 +1,3 @@
-
 # Web App에서 BlockChain 호출하기
 
 ### A. Blockchain Query하기
@@ -49,7 +48,11 @@
 
 1. 사용자 이름 "SamDealer"와 아무 비밀번호나 넣고 로그인하십시오.
 
-    차량 번호로 "dtrt10001"을 입력하십시오(Chassis number of a vehicle). Vehicle new owner로 "DetroitAuto"를 입력하십시오. 그런 다음 "Transfer Vehicle"버튼을 클릭하십시오.
+    차량 번호로 "dtrt10001"을 입력하십시오(Chassis number of a vehicle). 
+    
+    Vehicle new owner로 "DetroitAuto"를 입력하십시오. 
+    
+    그런 다음 "Transfer Vehicle"버튼을 클릭하십시오.
 
     ![](images/sampleapp_transfer_vehicle.png)
 
@@ -64,7 +67,7 @@ REST 호출을 실행할 때 두 가지 옵션이 있습니다.
 - Postman과 같은 Tool 사용
 - 터미널에서 "curl" 명령 사용
 
-PostMan은 앞서 기초 데이터를 넣을 때 이미 사용했습니다.
+Postman은 앞서 기초 데이터를 넣을 때 이미 사용했습니다.
 이미 배포된 곳에 Query를 위한 샘플용 request가 들어 있습니다.
 
 1. 왼쪽 request들 가장 아래 부분에 Query Vehicle 이라는 request를 선택하십시오.
