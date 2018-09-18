@@ -118,8 +118,10 @@ CarTrace Ledger를 호출하기 위한 Sample Web Application 3개를 Founder와
     </code></pre>
 
 2. 다시 zip으로 압축을 합니다.
-   이때 디렉토리가 포함되도록 하지 말고 해당 디렉토리에 들어가서 압축을 하셔야 합니다.
-    
+   
+   | 주의: 디렉토리가 포함되도록 하지 말고 해당 디렉토리에 들어가서 압축을 하셔야 합니다. |
+   | --- |
+
     이 Sample Application은 Node.js로 작성되었으며 Oracle Application Container에 배포할 수 있도록 설정파일인 manifest.json를 포함하고 있습니다.
 
 3. 3개 회사의 각 application을 배포하도록 하기 위해 Oracle Cloud Dashboard의 상단의 햄버거 모양을 클릭한 후 왼쪽 메뉴에서 Application Container를 클릭합니다.
