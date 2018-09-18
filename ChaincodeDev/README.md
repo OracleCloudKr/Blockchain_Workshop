@@ -42,10 +42,8 @@ Chaincode 프로그램은 Chaincode 인터페이스를 구현해야 합니다.
     | --- |
 
 ## Simple Asset Chaincode 작성하기
-1. $GOPATH/src/에 sacc 라고 하는 새로운 파일을 하나 생성합니다.
+1. $GOPATH/src/에 sacc.go 라고 하는 새로운 파일을 하나 생성합니다.
 
-    - **package import**
-  
     간단히 ledger에 assets(Key-value 쌍)을 생성하는 기본 chaincode를 만들도록 하겠습니다.
 
     먼저, 모든 체인 코드는 [Chaincode interface](https://godoc.org/github.com/hyperledger/fabric/core/chaincode/shim#Chaincode)인 Init 및 Invoke 함수를 구현해야 합니다.
@@ -68,7 +66,7 @@ Chaincode 프로그램은 Chaincode 인터페이스를 구현해야 합니다.
     }
     </code></pre>
 
-1. Chaincode 초기화
+2. Chaincode 초기화
    
     다음 Init 함수를 구현할 것입니다.
     
@@ -81,7 +79,7 @@ Chaincode 프로그램은 Chaincode 인터페이스를 구현해야 합니다.
     | 주의 : Chaincode upgrade 역시 이 함수를 호출합니다. 기존 코드를 upgrade할 Chaincode를 작성할 때 Init 함수를 적절하게 수정해야 합니다. 특히 Upgrade의 일부로서 초기화할 것이 아무것도 없는 경우 위와 같이 비어 있는 Init 메소드를 제공해야 합니다. |
     | --- |
 
-1. init Parameter 유효성 검사
+3. init Parameter 유효성 검사
    
     다음으로 Init 호출될때 특정값들이 정상적으로 들어 왔는지 유효성 검사를 하는 코드를 넣도록 하겠습니다.
     입력 받은 값을 얻기 위해서는 ChaincodeStubInterface.GetStringArgs 함수를 사용합니다.
@@ -106,7 +104,7 @@ Chaincode 프로그램은 Chaincode 인터페이스를 구현해야 합니다.
     입력값이 유효하다는 것을(2개의 파라미터 임을) 확인한 후에는 ledger에 입력 받은 값을 저장합니다. 
     이를 위해 인수로 전달 된 Key와 Value값으로 ChaincodeStubInterface.PutState를 호출 할 것입니다. 모든 것이 성공적으로 끝나면 Peer.Response 객체에 Success 값을 넣어 반환합니다.
 
-1. Invoking the Chaincode
+4. Invoking the Chaincode
 
     체인코드에 들어 있는 값들을 호출하는 함수를 구현해보도록 하겠습니다.
 
