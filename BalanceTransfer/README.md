@@ -1,4 +1,4 @@
-# Balance Transfer #
+# 샘플 체인코드 배포 및 테스트 (Balance Transfer) #
 -----
 ## 사전 준비사항 ##
 + Oracle Cloud Trial Account ([Trial 계정 신청하기](http://www.oracloud.kr/post/oracle_cloud_trial_universal/))
