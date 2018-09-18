@@ -4,7 +4,7 @@
 ### A. Blockchain Query하기
 1. 앞에서 생성한 Application들의 console을 클릭해서 각각의 App을 엽니다.
    ![](images/accs7.png)
-   
+
     이 App들은 제조업체인 Detroit와 파트너업체인 Sam, Jude에서 사용하는 Vehicle Trace Dashboard입니다. 이 App은 각각 Org의 Chaincode에 접근해서 해당 채널에 배포된 Ledger로 부터 Query를 해오고, 다른 업체로 부품을 전달하는 Transaction을 수행할 수 있는 기능을 제공합니다.
   
    딜러들은 거래를 제조업체와 공유하는 비공개 채널로 푸시합니다. "carTrace"이라는 Smart Contract에 의해 실행됩니다.
@@ -20,6 +20,7 @@
     | -- |
 
     차량 번호:
+
     | dtrt10001, dtrt10002 |
     | -- |
 
@@ -58,7 +59,7 @@
 
 CarTrace의 모든 트랜잭션과 결과들은 REST API로 호출할 수 있습니다.
 REST 호출을 실행할 때 두 가지 옵션이 있습니다.
-- PostMan과 같은 Tool 사용
+- Postman과 같은 Tool 사용
 - 터미널에서 "curl" 명령 사용
 
 PostMan은 앞서 기초 데이터를 넣을 때 이미 사용했습니다.
