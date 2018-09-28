@@ -1,7 +1,7 @@
 # Car Dealer Lab #
 -----
 ## 사전 준비사항 ##
-+ Oracle Cloud Trial Account
++ [Oracle Cloud Trial Account](http://www.oracloud.kr/post/oracle_cloud_trial/)
 + Postman 툴 ([다운로드](https://www.getpostman.com/apps))
 
 ## 소개 ##
