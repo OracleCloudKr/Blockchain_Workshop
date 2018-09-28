@@ -3,13 +3,18 @@
 Multi-Party 블록 체인 네트워크를 설정하는 마지막 단계는 각 딜러의 거래를 다른 딜러의 거래와 분리하기 위해 각 딜러의 채널을 만드는 것입니다. 이 시나리오에서는 두 명의 각 대리점을 위한 별도의 채널을 만들 것입니다.
 
 1. Channel 생성
-    먼저 Founder Org의 콘솔에서 "Channels" 탭으로 이동하십시오. 그런 다음 "Create a New Channel"를 클릭하십시오. '<dealer> channel'이라는 (예 : 'samchannel'과 'judechannel') 채널을 만들면 됩니다. 각 채널에 대해 ReaderWriter가 포함되어 있고 Detroit Auto Peer의 피어가 모두 채널에 가입되어 있는지 확인하십시오.
+    먼저 **Founder Org(detroitauto)**의 콘솔에서 **Channels** 탭으로 이동하십시오. 그런 다음 **Create a New Channel**를 클릭하십시오. '<dealer> channel'이라는 (예 : **samchannel**과 **judechannel**) 두개의 채널을 만들면 됩니다. 각 두개의 채널에 대해 **ReaderWriter**가 포함되어 있고 Detroit Auto Peer의 피어가 모두 채널에 가입되어 있는지 확인하십시오.
+    | Channel Name | MSP ID    | ACL        |
+    |--------------|-----------|------------|
+    | samchannel   | samdealer |ReaderWriter|
+    | judechannel  | judedealer|ReaderWriter| 
+    
     ![](images/create_newchannel.png)
 
 2. Participant nodes에서 채널에 참가하기  
     이 채널들은 현재 Detroit Auto의 피어 노드만을 포함합니다. 딜러들은 참여하는 노드가 없으므로 이 채널에서 트랜잭션을 만들거나 트랜잭션을 볼 수 없습니다. 그러나 조직이 채널 생성시에 채널에 피어를 추가 할 수 있습니다.
-    생성 된 채널에 참여하려면 Participant Org의 콘솔에 액세스하십시오. "Nodes" 탭으로 이동하여 각 피어 노드(peer0-1, pee0-2)에 대하여 햄버거 메뉴를 클릭 한 다음 "Join New Channels"를 선택하십시오.
-    채널 이름을 묻는 대화 상자가 표시됩니다. 각 피어에 대해 채널 이름 ( 'samchannel'또는 'judechannel')을 적절하게 입력 한 다음 'Join'을 클릭하십시오.
+    생성 된 채널에 참여하려면 Participant Org의 콘솔에 액세스하십시오. **Nodes** 탭으로 이동하여 각 피어 노드(peer0-1, pee0-2)에 대하여 햄버거 메뉴를 클릭 한 다음 **Join New Channels**를 선택하십시오.
+    채널 이름을 묻는 대화 상자가 표시됩니다. 각 피어에 대해 채널 이름 ( **samchannel** 또는 **judechannel'**)을 적절하게 입력 한 다음 **Join**을 클릭하십시오.
     ![](images/join_channel_participant.png)
     ![](images/join_channel_participant2.png)
 
