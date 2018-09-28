@@ -13,6 +13,7 @@ Multi-Party 블록 체인 네트워크를 설정하는 마지막 단계는 각 �
 | judechannel  | judedealer| ReaderWriter| 
     
 ![](images/create_newchannel.png)
+
 두 개의 채널을 생성하였으면 다음 단계로 넘어갑니다.
 
 ## 2. Participant nodes에서 채널에 참가하기 (**samdealer** 먼저 수행합니다.)
