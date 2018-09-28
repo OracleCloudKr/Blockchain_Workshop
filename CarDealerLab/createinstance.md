@@ -11,7 +11,7 @@ OABCS에 접속하기 위해서는 Cloud Console에서 다음과 같이 선택�
 
 3. 이제 메인이 되는 DetroitAuto의 BlockChain Network를 만들 예정입니다.  
 서비스 이름을 **detroitauto** 라고 입력한 후 Next 버튼을 누릅니다.  
-<span style="color:red">서비스 이름은 모두 소문자로 입력하셔야 합니다.</span>
+<span style="color:red">*서비스 이름은 모두 소문자로 입력하셔야 합니다.*</span>
 ![](images/create_instance1.png)
 
 4. Next를 누른후 다음 화면에서 Confirm 버튼을 누릅니다.
@@ -28,11 +28,11 @@ OABCS에 접속하기 위해서는 Cloud Console에서 다음과 같이 선택�
 8. 이번에는 다른 Dealer들을 Participant(Organization)로 만드는 과정을 구성해보도록 하겠습니다. 
    
     인스턴스 생성을 클릭해서 생성화면으로 이동한 후 아래와 같이 정보를 입력합니다.
-    먼저 Jude Dealer를 생성하도록 하겠습니다.
-    여기서는 새로운 네트워크를 생성하는 Founder가 아니기 때문에 Create a new Network 체크를 해제 합니다.
+    먼저 **Jude Dealer**를 생성하도록 하겠습니다.
+    여기서는 새로운 네트워크를 생성하는 Founder가 아니기 때문에 **Create a new Network 체크를 해제** 합니다.
     ![](images/create_judedealer.png)
 
-1. 동일한 과정을 거쳐 Sam Dealer 를 생성하도록 하겠습니다.
+1. 동일한 과정을 거쳐 **Sam Dealer** 를 생성하도록 하겠습니다.
 ![](images/create_samdealer.png)
 
 ---
