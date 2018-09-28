@@ -1,7 +1,7 @@
 # 인스턴스 생성하기
 
 1. OABCS(Oracle BlockChain Cloud Service) Console 에 접속하기  
-OABCS에 접속하기 위해서는 Cloud Console에서 다음과 같이 선택해서 Open Service Console을 클릭합니다.
+OABCS에 접속하기 위해서는 Cloud Console에서 다음과 같이 선택해서 **Open Service Console**을 클릭합니다.
 ![](images/gotoabcs.png)
 
 2. Organization(조직) 생성하기 Provisioning
@@ -10,7 +10,7 @@ OABCS에 접속하기 위해서는 Cloud Console에서 다음과 같이 선택�
 ![](images/abcs_main.png)
 
 3. 이제 메인이 되는 DetroitAuto의 BlockChain Network를 만들 예정입니다.  
-서비스 이름을 detroitauto 라고 입력한 후 Next 버튼을 누릅니다.  
+서비스 이름을 **detroitauto** 라고 입력한 후 Next 버튼을 누릅니다.  
 <span style="color:red">서비스 이름은 모두 소문자로 입력하셔야 합니다.</span>
 ![](images/create_instance1.png)
 
