@@ -1,7 +1,7 @@
 # 인스턴스 생성하기
 
 1. OABCS(Oracle BlockChain Cloud Service) Console 에 접속하기  
-OABCS에 접속하기 위해서는 Cloud Console에서 다음과 같이 선택해서 **Open Service Console**을 클릭합니다.
+OABCS에 접속하기 위해서는 Cloud Console에서 다음과 같이 선택해서 `Open Service Console`을 클릭합니다.
 ![](images/gotoabcs.png)
 
 2. Organization(조직) 생성하기 Provisioning
