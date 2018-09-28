@@ -24,9 +24,9 @@ Chaincode는 golang (GO로도 알려짐)으로 작성되었지만, golang에 익
 ![](images/deploy_chaincode1.png)
 ![](images/deploy_chaincode2.png)
 
-> Chaincode Name : **carTrace**
-> Version : **v1**
-> Target Peers : peer0-1, peer0-2
+> Chaincode Name : **carTrace** <br/>
+> Version : **v1** <br/>
+> Target Peers : peer0-1, peer0-2 
 
 ![](images/deploy_chaincode3.png)
 
