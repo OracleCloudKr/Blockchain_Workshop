@@ -4,7 +4,7 @@ Multi-Party 블록 체인 네트워크를 설정하는 마지막 단계는 각 �
 
 ## 1. Channel 생성
 
-    먼저 **Founder Org(detroitauto)**의 콘솔에서 **Channels** 탭으로 이동하십시오. 그런 다음 **Create a New Channel**를 클릭하십시오
+먼저 **Founder Org(detroitauto)**의 콘솔에서 **Channels** 탭으로 이동하십시오. 그런 다음 **Create a New Channel**를 클릭하십시오
     **samchannel**과 **judechannel** 두개의 채널을 만들면 됩니다. 각 두개의 채널에 대해 **ReaderWriter**가 포함되어 있고 Detroit Auto Peer의 피어가 모두 채널에 가입되어 있는지 확인하십시오.
   
     | Channel Name | MSP ID    | ACL         |
