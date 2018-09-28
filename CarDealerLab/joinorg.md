@@ -5,7 +5,7 @@
 ![](images/goto_judedealer.png)
 
 2. Founder는 Participant Org의 두 가지 정보가 필요합니다. 첫째는 참가하는 Org를 검증 하기 위한 인증서가 필요하고, 두번째는 Org에서 관리하는 피어 노드에 대한 정보입니다. 피어 정보는 이후 프로세스까지 필요하지 않습니다.
-Participant의 인증서를 가져오기 위해 Participant Org의 콘솔을 엽니다. **네트워크** 탭에서 햄버거 메뉴를 클릭하고 딜러 조직에서 **'인증서 내보내기'**를 선택하여 인증서를 내보낼 수 있습니다. 내보낸 파일을 저장하십시오.
+Participant의 인증서를 가져오기 위해 Participant Org의 콘솔을 엽니다. **네트워크** 탭에서 햄버거 메뉴를 클릭하고 딜러 조직에서 **인증서 내보내기**를 선택하여 인증서를 내보낼 수 있습니다. 내보낸 파일을 저장하십시오.
 ![](images/judedealer_main.png)
 
 3. **Export** 버튼을 눌러 **judedealer-certificates.json** 파일을 서버로 부터 로컬 컴퓨터에 다운로드 합니다.  
