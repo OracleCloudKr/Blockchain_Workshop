@@ -26,8 +26,8 @@ Multi-Party 블록 체인 네트워크를 설정하는 마지막 단계는 각 �
     
 | Participant Org | MSP ID     | 대상 Peer    |
 | --------------- | ---------- | ----------- |
-| samdealer       | samchannel | peer0-1, pee0-2|
-| judedealer      | judechannel| peer0-1, pee0-2| 
+| samdealer       | samchannel | peer0-1, peer0-2|
+| judedealer      | judechannel| peer0-1, peer0-2| 
     
 ![](images/join_channel_participant.png)
 ![](images/join_channel_participant2.png)
