@@ -108,7 +108,6 @@ Participant의 각 콘솔에서 **Chaincodes** 탭으로 이동하십시오. 이
 ![](images/participant_import_again2.png)
 
 > 참고 : 이 Lab에서는 두번 Export를 했는데, 처음에 채널에 Join하고 나서 한번 체인코드 배포 후 한번 이렇게 두번입니다. 첫 번째 내보내기 / 가져 오기는 반드시 필요한 것은 아니며 네트워크 토폴로지의 유효성 검사를 하기 위한 한번 미리 해본 것입니다.
-Participant 노드 정보를 Founder로 가져온 후 위의 지침에 따라 Founder의 노드 정보를 각 Participant에게 내보내야 합니다.
 
 ### 5. Gateway 구성
    
