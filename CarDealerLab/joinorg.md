@@ -30,7 +30,7 @@ Participant의 인증서를 가져오기 위해 Participant Org의 콘솔(**jude
 
 9. 이제 지금까지 JudeDealer를 구성했고, JudeDealer에 대한 정보도 얻었습니다. 일반적으로 이 프로세스는 단일 사용자가 수행하지 않으며 대신 새로운 조직을 Blockchain 네트워크에 탑재하기 위해 메타 데이터를 전송해야 합니다. Oracle Blockchain Cloud Service는 서로 알려진 조직에게만 액세스 권한이 부여되는 'permissioned' 네트워크이며, 지금 하고 있는 작업을 통해 활성화가 되게 됩니다.
 
-    Founder에도 JudeDealer를 추가해주어야 합니다. Founder 콘솔의 Network로 이동해서 **Add Organizations** 버튼을 클릭합니다.
+Founder에도 **JudeDealer**를 추가해주어야 합니다. Founder 콘솔의 Network로 이동해서 **Add Organizations** 버튼을 클릭합니다.
 ![](images/founder_addorg.png)
 
 10. **Upload Organization Certificates** 버튼을 클릭한 후 앞에서 다운로드 한 **judedealer-certificates.json** 파일을 선택하고 Add 버튼을 눌러 Org를 추가합니다.
