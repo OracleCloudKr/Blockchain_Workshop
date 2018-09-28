@@ -144,8 +144,8 @@ Chaincode 프로그램은 Chaincode 인터페이스를 구현해야 합니다.
 
     // 각 함수에서 받은 결과를 Success payload로 실어서 반환
     return shim.Success([]byte(result))
-}
-</code></pre>
+    }
+    </code></pre>
 
 1. Chaincode 애플리케이션 구현
 
