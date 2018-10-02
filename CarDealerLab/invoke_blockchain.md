@@ -96,7 +96,7 @@
 
 
 1. "Vehicle Trace Dashboard"를 열고 **transfer**탭을 선택하여 트랜잭션을 실행하십시오.
-    **Sam의 Dealer**에서 **Detroit Auto**로 차량번호 **dtrt10001**를 전송해 보겠습니다.
+    **Sam Dealer**에서 **Detroit Auto**로 차량번호 **dtrt10001**를 전송해 보겠습니다.
 
 1. 사용자 이름 **SamDealer**와 아무 비밀번호나 넣고 로그인하십시오.
 
