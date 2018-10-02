@@ -1,4 +1,4 @@
-# Ledger 초기화 및 Dashboard 용 Sample Web Application 준비하기
+# Ledger 초기화 및 Dashboard 용 Application 준비하기
 
 ### A. Ledger 초기화
 
