@@ -76,55 +76,13 @@ Body: {
 
 
 ### B. Sample Web App 배포
-CarTrace Ledger를 호출하기 위한 Sample Web Application 3개를 Founder와 participant 별로 각각 필요합니다.
+CarTrace Ledger를 호출하기 위한 Sample Web Application이 필요합니다.
 1. 먼저 아래의 링크에서 다운로드 받으세요.
-
-    [jude_webapp.zip](https://github.com/OracleCloudKr/Blockchain_Workshop/raw/master/CarDealerLab/artifacts/jude_webapp.zip)
 
     [founder_webapp.zip](https://github.com/OracleCloudKr/Blockchain_Workshop/raw/master/CarDealerLab/artifacts/founder_webapp.zip)
 
-    [sam_webapp.zip](https://github.com/OracleCloudKr/Blockchain_Workshop/raw/master/CarDealerLab/artifacts/sam_webapp.zip)
 
-1. 각각 압축을 푸신후에 config.json을 아래와 같이 수정합니다.
-
-
-    아래와 같이 굵게 표시된 부분(gw_endpoint, username, password)을 각자의 환경에 맞게 수정합니다.
-    <pre></code>
-    {
-    "logger": {
-        "appenders": [
-        {
-            "type": "console",
-            "makers": {}
-        }
-        ],
-        "levels": {
-        "[all]": "DEBUG"
-        }
-    },
-    "gw_endpoint": "https://<b>xxxxxxxxxxxx</b>.blockchain.ocp.oraclecloud.com:443",
-    "channel": "detroit-auto-channel",
-    "chaincode_name": "carTrace",
-    "chaincode_ver": "v1",
-    "username": "<b>username@xxx.com</b>",
-    "password": "<b>xxxxxx</b>",
-    "title": "Detroit Autos",
-    "configurable": false,
-    "server_port": 8080,
-    "channel_mapping": {
-        "detroit-auto-channel": ["samchannel","judechannel"]
-    }
-    }
-    </code></pre>
-
-2. 다시 zip으로 압축을 합니다.
-   
-   | 주의: 디렉토리가 포함되도록 하지 말고 해당 디렉토리에 들어가서 압축을 하셔야 합니다. |
-   | --- |
-
-    이 Sample Application은 Node.js로 작성되었으며 Oracle Application Container에 배포할 수 있도록 설정파일인 manifest.json를 포함하고 있습니다.
-
-3. 3개 회사의 각 application을 배포하도록 하기 위해 Oracle Cloud Dashboard의 상단의 햄버거 모양을 클릭한 후 왼쪽 메뉴에서 Application Container를 클릭합니다.
+3. application을 배포하도록 하기 위해 Oracle Cloud Dashboard의 상단의 햄버거 모양을 클릭한 후 왼쪽 메뉴에서 Application Container를 클릭합니다.
 ![](images/goto_accs.png)
 
 1. 처음 접속할 경우 나오는 welcome page에서 Go to console을 클릭합니다.
@@ -136,19 +94,12 @@ CarTrace Ledger를 호출하기 위한 Sample Web Application 3개를 Founder와
 1. 제공하는 여러 가지 언어 중 Node를 선택합니다.
 ![](images/accs2.png)
 
-1. Name을 detroit라고 한 후 Application에서 파일 선택 버튼을 누른 후 로컬에 준비한 founder_webapp.zip 을 선택합니다. 
+1. Name을 `detroit`라고 한 후 Application에서 파일 선택 버튼을 누른 후 로컬에 준비한 detroit_webapp.zip 을 선택합니다. 
    
    Instances는 Load Balancing을 위해 기본적으로 2개의 인스턴스가 생성이 되는데, 여기서는 1개로 설정을 낮추겠습니다. 이제 Create번을 눌러 생성합니다. 이제 몇분 정도 기다리면 Application이 준비가 되게 됩니다.
     ![](images/accs3.png)
 
-2. 바로 두번째 Application을 만들어 보겠습니다. 이번에는 딜러사인 sam과 jude 회사를 위한 sample application을 생성합니다.
-![](images/accs4.png)
-
-1. 위의 step과 동일하게 각각 생성합니다.
-![](images/accs5.png)
-![](images/accs6.png)
-
-1. 모두 생성이 되게 되면 아래와 같이 나오게 되고, 아래 붉은 색으로 되어 있는 URL을 클릭하면 바로 web application에 접근할 수 있습니다. 각 링크를 눌러서 화면이 정상적으로 뜨는지 확인해보시기 바랍니다.
+1. 애플리케이션 생성이 완료 되면 아래와 같이 나오게 되고, 아래 붉은 색으로 되어 있는 URL을 클릭하면 바로 web application에 접근할 수 있습니다. 링크를 눌러서 화면이 정상적으로 뜨는지 확인해보시기 바랍니다.
 ![](images/accs7.png)
 
 ---
