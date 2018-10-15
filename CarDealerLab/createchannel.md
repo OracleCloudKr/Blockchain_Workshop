@@ -14,13 +14,15 @@ Multi-Party 블록 체인 네트워크를 설정하는 마지막 단계는 각 �
     
 ![](images/create_newchannel.png)
 
-두 개의 채널을 생성하였으면 다음 단계로 넘어갑니다.
+한번 생성된 채널은 삭제할 수 없기 때문에, 이름 생성시 주의하시기 바랍니다. 다시 한번 확인한 후에 Yes를 누릅니다.
+![](images/create_newchannel2.png)
 
-## 2. Participant nodes에서 채널에 참가하기 (**samdealer** 먼저 수행합니다.)
+두 개의 채널을 모두 생성 한 후에 다음 단계로 넘어갑니다.
 
-이 채널들은 현재 Detroit Auto의 피어 노드만을 포함합니다. 딜러들은 참여하는 노드가 없으므로 이 채널에서 트랜잭션을 만들거나 트랜잭션을 볼 수 없습니다. 그러나 조직이 채널 생성시에 채널에 피어를 추가 할 수 있습니다.<br/>
+## 2. Participant(딜러) nodes에서 채널에 참가하기 (**samdealer** 먼저 수행합니다.)
+앞에서 만든 채널은 각각의 딜러들이 참여할 수 있다는 정보만을 입력한 것이므로 현재는 아직 참여가 되어 있지 않은 상태로, Detroit Auto의 피어 노드만 포함되어 있습니다. 딜러들은 참여하는 노드가 없으므로 이 채널에서 트랜잭션을 만들거나 트랜잭션을 볼 수 없습니다.
     
-생성 된 채널에 참여하려면 Participant Org의 콘솔에 액세스하십시오. 
+생성된 채널에 참여하려면 Participant Org의 콘솔에 액세스하십시오. 
 **Nodes** 탭으로 이동하여 각 피어 노드(peer0-1, pee0-2)에 대하여 햄버거 메뉴를 클릭 한 다음 **Join New Channels**를 선택하십시오.
 채널 이름을 묻는 대화 상자가 표시됩니다. 조인할 채널명은 어떤 Org에서 작업하냐에 땨라 달라집니다. 다음 표를 보고 Org와 Channel을 잘 선택한 다음 **Join**을 클릭하십시오.
     
@@ -37,8 +39,9 @@ Multi-Party 블록 체인 네트워크를 설정하는 마지막 단계는 각 �
     - judedealer에 대해서도 동일한 작업을 수행합니다.
 
 ## 3. Endorsing을 위한 Participant 정보를 Founder에 추가하기
-   
-Founder가 다른 Org를 Transaction 의 endorser로 포함 시키려면 다른 피어 노드에 대해 알아야 합니다. 이렇게 하기 위해 Participant 노드 정보를 내보내고 Founder에서 가져와야 합니다.
+Endorsing단계에서 Founder뿐만 아니라 다른 Org에서도 검증을 하도록  할 수 있습니다.
+
+Founder가 다른 Org를 Transaction 의 endorser로 포함 시키려면 다른 피어 노드에 대해 알아야 합니다. 이렇게 하기 위해 Participant에서 노드 정보를 내보내고 Founder에서 가져와야 합니다.
 
 Participant Org에서 **Nodes** 탭으로 이동 한 다음 **Export / Import** 버튼을 클릭하여 노드 정보를 내보냅니다. Participant의 Peer(peer0-1, peer0-2)를 모두 선택한 다음 **Export**를 클릭하고 결과 파일을 저장합니다.
 ![](images/participant_export1.png)

@@ -94,7 +94,7 @@ Participant의 각 콘솔에서 **Chaincodes** 탭으로 이동하십시오. 이
 
 ### 4. Peer정보 다시 Export하기
 
-체인 코드를 노출시키기 위해서는, 이 체인 코드가 Participant의 peer에서 사용 가능하다는 것을 Founder Org에게 알려주어야 합니다. 이렇게 하려면 노드 탭에서 **Export / Import** 버튼을 클릭해서 Participant의 Peer를 내보내는 방법으로 노드 정보를 한 번 더 내보내야 합니다.
+Rest Proxy를 통해 이 Participant에서 endorsing을 하기 위해서는 이 Participant의 Peer들도 체인코드가 실행이 가능하다는 정보를 Founder Org에게 알려주어야 합니다. 이렇게 하려면 노드 탭에서 **Export / Import** 버튼을 클릭해서 Participant의 Peer를 내보내는 방법으로 노드 정보를 한 번 더 내보내야 합니다.
 
 노드 정보가 export되면, Founder의 Node 탭 에서 **Export / Import** 버튼과 **Import** 옵션을 통해 가져올 수 있습니다.
 
