@@ -11,7 +11,6 @@ OABCS에 접속하기 위해서는 Cloud Console에서 다음과 같이 선택�
 
 3. 이제 메인이 되는 DetroitAuto의 BlockChain Network를 만들 예정입니다.  
 서비스 이름을 **detroitauto** 라고 입력한 후 Next 버튼을 누릅니다.  
-<span style="color:red">*서비스 이름은 모두 소문자로 입력하셔야 합니다.*</span>
 ![](images/create_instance1.png)
 
 4. Next를 누른후 다음 화면에서 Confirm 버튼을 누릅니다.
