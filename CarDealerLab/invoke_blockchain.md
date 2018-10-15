@@ -87,7 +87,9 @@
 
     ![](images/sampleapp1.png)
 
-## C. Transaction 실행하기
+-----
+
+## B. Transaction 실행하기
 1. 다시 Sam Dealer 채널로 설정합니다. 화면 상단 우측의 아이콘을 클릭하여 Sam 이 사용하는 채널로 설정합니다.
     - REST Proxy Endpoint : 위에서 설정한 동일 REST URL을 사용합니다.
     - Channel Name : **samchannel**
@@ -113,7 +115,9 @@
 2. 오른쪽의 API Details에서와 같이 API 호출 시에 JSON 형태로 History 데이터가 반환되는 것을 확인할 수 있습니다.
 ![](images/sample_app_trace.png)
 
-## D. REST API를 통해 Transaction 실행
+-----
+
+## C. REST API를 통해 Transaction 실행
 
 CarTrace의 모든 트랜잭션과 결과들은 REST API로 호출할 수 있습니다.
 REST 호출을 실행할 때 두 가지 옵션이 있습니다.
