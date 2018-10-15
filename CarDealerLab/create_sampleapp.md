@@ -86,21 +86,21 @@ CarTrace 체인코드를 실행하고 기존 Ledger 내의 정보를 확인하�
 ![](images/goto_accs.png)
 
 1. 처음 접속할 경우 나오는 welcome page에서 '콘솔로 이동'을 클릭합니다.
-![](images/accs_gotoconsole.png)
+   ![](images/accs_gotoconsole.png)
 
 1. '애플리케이션 생성'을 클릭합니다.
-![](images/accs1.png)
+    ![](images/accs1.png)
 
-1. 제공하는 여러 가지 언어 중 Node를 선택합니다.
-![](images/accs2.png)
+2. 제공하는 여러 가지 언어 중 Node를 선택합니다.
+    ![](images/accs2.png)
 
-1. Name을 `car`라고 한 후 Application에서 파일 선택 버튼을 누른 후 로컬에 준비한 cardealer_webapp.zip 을 선택합니다. 
+1. Name을 `car`라고 한 후 Application에서 파일 선택 버튼을 누른 후 로컬에 다운로드 한  cardealer_webapp.zip 을 선택합니다. 
    
    인스턴수 수는 Load Balancing을 위해 기본적으로 2개의 인스턴스가 생성이 되는데, 여기서는 **1개**로 설정을 낮추겠습니다. 이제 생성 버튼을 눌러 인스턴스를 생성합니다. 이제 몇분 정도 기다리면 Application이 준비가 되게 됩니다.
     ![](images/accs3.png)
 
-1. 애플리케이션 생성이 완료 되면 아래와 같이 나오게 되고, 아래 붉은 색으로 되어 있는 URL을 클릭하면 바로 web application에 접근할 수 있습니다. 링크를 눌러서 화면이 정상적으로 뜨는지 확인해보시기 바랍니다.
-![](images/accs7.png)
+2. 애플리케이션 생성이 완료 되면 아래와 같이 나오게 되고, 아래 붉은 색으로 되어 있는 URL을 클릭하면 바로 web application에 접근할 수 있습니다. 링크를 눌러서 화면이 정상적으로 뜨는지 확인해보시기 바랍니다.
+    ![](images/accs7.png)
 
 ---
 [이전 Lab으로 이동](README.md)
