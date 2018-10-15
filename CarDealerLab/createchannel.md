@@ -32,12 +32,15 @@ Multi-Party 블록 체인 네트워크를 설정하는 마지막 단계는 각 �
 ![](images/join_channel_participant.png)
 ![](images/join_channel_participant2.png)
 
-## 3. peer0-1, peer0-2 모두 채널에 Join 시킵니다.   
+- 주의사항
+    - peer0-1, peer0-2 모두 채널에 Join 시킵니다.   
+    - judedealer에 대해서도 동일한 작업을 수행합니다.
 
 ## 4. Endorsing을 위한 Participant 정보를 Founder에 추가하기
    
-Founder가 다른 Org를 Transaction 의 endorser로 포함 시키려면 다른 피어 노드에 대해 알아야합니다. 이렇게 하기 위해 우리는 노드 정보를 내보내고 Founder에서 가져옵니다.
-Participant Org에서 **Nodes** 탭으로 이동 한 다음 **Export / Import** 버튼을 클릭하여 노드 정보를 내 보냅니다. Participant의 Peer(peer0-1, peer0-2)를 모두 선택한 다음 **Export**를 클릭하고 결과 파일을 저장합니다.
+Founder가 다른 Org를 Transaction 의 endorser로 포함 시키려면 다른 피어 노드에 대해 알아야 합니다. 이렇게 하기 위해 Participant 노드 정보를 내보내고 Founder에서 가져와야 합니다.
+
+Participant Org에서 **Nodes** 탭으로 이동 한 다음 **Export / Import** 버튼을 클릭하여 노드 정보를 내보냅니다. Participant의 Peer(peer0-1, peer0-2)를 모두 선택한 다음 **Export**를 클릭하고 결과 파일을 저장합니다.
 ![](images/participant_export1.png)
 
 ![](images/participant_export2.png)
