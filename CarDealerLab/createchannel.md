@@ -36,7 +36,7 @@ Multi-Party 블록 체인 네트워크를 설정하는 마지막 단계는 각 �
     - peer0-1, peer0-2 모두 채널에 Join 시킵니다.   
     - judedealer에 대해서도 동일한 작업을 수행합니다.
 
-## 4. Endorsing을 위한 Participant 정보를 Founder에 추가하기
+## 3. Endorsing을 위한 Participant 정보를 Founder에 추가하기
    
 Founder가 다른 Org를 Transaction 의 endorser로 포함 시키려면 다른 피어 노드에 대해 알아야 합니다. 이렇게 하기 위해 Participant 노드 정보를 내보내고 Founder에서 가져와야 합니다.
 
@@ -51,9 +51,9 @@ Participant Org에서 **Nodes** 탭으로 이동 한 다음 **Export / Import** 
 
 프로세스가 정상적으로 완료되면 다른 Org의 Peer 노드가 목록에 나타나야 합니다. MSP(Membership Service Provider)를 통해 네트워크에 속한 조직을 추적할 수 있습니다.
 
-## 5. 2 ~ 4 과정을 **judedealer**에서도 수행합니다.
+## 4. 2 ~ 4 과정을 **judedealer**에서도 수행합니다.
 
-## 6. Network구성 Review하기
+## 5. Network구성 Review하기
 지금까지 구축한 네트워크에 대한 구성도를 Founder "Nodes" 탭으로 이동하여 확인할 수 있습니다. Dealer의 피어 노드뿐 아니라 Detroitauto 노드가 목록에 있는지 확인하십시오. 
 ![](images/founder_import_participant3.png)
 
