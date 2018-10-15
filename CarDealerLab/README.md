@@ -32,15 +32,10 @@
 ### C. [Channel 생성하기](createchannel.md)
 
 ---
-
 ## 2. [체인코드 배포하기](chaincode_deploy.md)
-
 ---
-
 ## 3. [Sample Web App 준비하기](create_sampleapp.md)
-
 ---
-
 ## 4. [Web App 에서 Blockchain 호출하기](invoke_blockchain.md)
 
 -----
