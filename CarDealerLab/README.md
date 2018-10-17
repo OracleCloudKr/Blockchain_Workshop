@@ -20,7 +20,8 @@
 
 ## Lab 구성도
 
-![Alt text](https://monosnap.com/image/BBXC4fq5g4HDyZG3SXeveoT905IHy8.png)
+![](images/overview.png)
+
 
 # Lab 시작
 
